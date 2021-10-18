@@ -403,6 +403,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="pEx-tf-aI6">
                             <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="onSearchButton:" destination="BYZ-38-t0r" id="hy3-jJ-2Xl"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

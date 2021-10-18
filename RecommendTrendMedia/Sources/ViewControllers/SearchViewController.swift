@@ -9,6 +9,9 @@ import UIKit
 
 class SearchViewController: UIViewController {
   
+  // MARK: Properties
+  var titleSpace: String?
+  
   // MARK: UI
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var searchTableView: UITableView!
@@ -18,8 +21,15 @@ class SearchViewController: UIViewController {
     super.viewDidLoad()
     searchTableView.delegate = self
     searchTableView.dataSource = self
+    
+    title = titleSpace
+    navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "multiply"), style: .plain, target: self, action: #selector(vcDismiss))
+    navigationItem.leftBarButtonItem?.tintColor = .systemRed
   }
   
+  @objc func vcDismiss() {
+     self.navigationController?.popViewController(animated: true)
+   }
 }
 
 // MARK: Extension - UITableViewDelegate
