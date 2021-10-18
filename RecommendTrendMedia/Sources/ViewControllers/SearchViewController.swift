@@ -22,6 +22,10 @@ class SearchViewController: UIViewController {
     searchTableView.delegate = self
     searchTableView.dataSource = self
     
+    naviConfigure()
+  }
+  
+  func naviConfigure() {
     title = titleSpace
     navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "multiply"), style: .plain, target: self, action: #selector(vcDismiss))
     navigationItem.leftBarButtonItem?.tintColor = .systemRed

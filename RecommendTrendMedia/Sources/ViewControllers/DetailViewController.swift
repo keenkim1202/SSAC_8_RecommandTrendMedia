@@ -22,7 +22,6 @@ class DetailViewController: UIViewController {
     
     self.navigationController?.navigationBar.tintColor = .systemRed
   }
-  
 }
 
 // MARK: Extension - TableViewDelegate
@@ -44,6 +43,4 @@ extension DetailViewController: UITableViewDataSource {
     cell.cellConfigure()
     return cell
   }
-  
-  
 }
