@@ -19,12 +19,17 @@ class DetailViewController: UIViewController {
     super.viewDidLoad()
     detailTableView.delegate = self
     detailTableView.dataSource = self
+    
+    self.navigationController?.navigationBar.tintColor = .systemRed
   }
   
 }
 
 // MARK: Extension - TableViewDelegate
 extension DetailViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 80
+  }
 }
 
 // MARK: Extension - TableViewDataSource
@@ -36,6 +41,7 @@ extension DetailViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.identifier) as? DetailTableViewCell else { return UITableViewCell() }
     // cell configure
+    cell.cellConfigure()
     return cell
   }
   

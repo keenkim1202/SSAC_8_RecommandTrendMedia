@@ -13,4 +13,8 @@ class DetailTableViewCell: UITableViewCell {
   @IBOutlet weak var detailImageView: UIImageView!
   @IBOutlet weak var detailTitleLabel: UILabel!
   @IBOutlet weak var detailSubtitleLabel: UILabel!
+  
+  func cellConfigure() {
+    detailImageView.layer.cornerRadius = CGFloat(8)
+  }
 }

@@ -46,7 +46,8 @@ extension TrendViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print(indexPath.section, indexPath.row)
+    guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detailVC") as? DetailViewController else { return }
+    self.navigationController?.pushViewController(detailVC, animated: true)
   }
 }
 

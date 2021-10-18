@@ -98,6 +98,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1uw-hn-cAG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="sXJ-oK-mnU" firstAttribute="top" secondItem="1uw-hn-cAG" secondAttribute="top" id="BrS-Dq-LQm"/>
                             <constraint firstItem="1uw-hn-cAG" firstAttribute="bottom" secondItem="sXJ-oK-mnU" secondAttribute="bottom" id="lT2-CW-jkS"/>
@@ -460,25 +461,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-jo-Vj3">
-                                                    <rect key="frame" x="16" y="16" width="382" height="48"/>
+                                                    <rect key="frame" x="16" y="10" width="382" height="60"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="profile_4" translatesAutoresizingMaskIntoConstraints="NO" id="fBK-ds-4dC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="fBK-ds-4dC" secondAttribute="height" multiplier="1:1" id="gOt-MJ-Pkl"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TMv-bD-xXe">
-                                                            <rect key="frame" x="58" y="0.0" width="324" height="48"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TMv-bD-xXe">
+                                                            <rect key="frame" x="70" y="0.0" width="312" height="60"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="배우 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UW-Gg-4fN">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="324" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="312" height="30"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="역할 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggQ-9O-z7W">
-                                                                    <rect key="frame" x="0.0" y="26.5" width="324" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="30" width="312" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -496,8 +497,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="NzG-jo-Vj3" secondAttribute="trailing" constant="16" id="8Bq-TX-QSi"/>
-                                                <constraint firstItem="NzG-jo-Vj3" firstAttribute="top" secondItem="P6h-Pf-3cL" secondAttribute="top" constant="16" id="Fp3-r2-7y2"/>
-                                                <constraint firstAttribute="bottom" secondItem="NzG-jo-Vj3" secondAttribute="bottom" constant="16" id="mlQ-yI-Kmz"/>
+                                                <constraint firstItem="NzG-jo-Vj3" firstAttribute="top" secondItem="P6h-Pf-3cL" secondAttribute="top" constant="10" id="Fp3-r2-7y2"/>
+                                                <constraint firstAttribute="bottom" secondItem="NzG-jo-Vj3" secondAttribute="bottom" constant="10" id="mlQ-yI-Kmz"/>
                                                 <constraint firstItem="NzG-jo-Vj3" firstAttribute="leading" secondItem="P6h-Pf-3cL" secondAttribute="leading" constant="16" id="ybk-u6-4ZQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -512,6 +513,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wLV-VO-0Us"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="a3o-sa-l31" firstAttribute="top" secondItem="wLV-VO-0Us" secondAttribute="top" id="IfP-bI-ebi"/>
                             <constraint firstItem="a3o-sa-l31" firstAttribute="leading" secondItem="wLV-VO-0Us" secondAttribute="leading" id="TGv-h7-TIE"/>
