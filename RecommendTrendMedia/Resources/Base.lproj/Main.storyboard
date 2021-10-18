@@ -27,13 +27,62 @@
                                         <rect key="frame" x="0.0" y="51" width="414" height="723"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" rowHeight="100" id="q1q-y6-crW">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" rowHeight="100" id="q1q-y6-crW" customClass="SearchTableViewCell" customModule="RecommendTrendMedia" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1q-y6-crW" id="Xkv-iO-zQH">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grey's_Anatomy" translatesAutoresizingMaskIntoConstraints="NO" id="DM4-99-Dit">
+                                                            <rect key="frame" x="16" y="10" width="61.5" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="DM4-99-Dit" secondAttribute="height" multiplier="1:1.3" id="Ae7-7B-DG9"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="54t-wh-H66">
+                                                            <rect key="frame" x="87.5" y="10" width="310.5" height="80"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ww-Kn-RpF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScK-P6-fDH">
+                                                                    <rect key="frame" x="0.0" y="23" width="22.5" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="영화줄거리가 좌라락 주르륵 드르륵 오로록 우루룩 주저리주저리 조잘조잘 재잘재잘" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9j-yH-60G">
+                                                                    <rect key="frame" x="0.0" y="44" width="304" height="36"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="54t-wh-H66" firstAttribute="leading" secondItem="DM4-99-Dit" secondAttribute="trailing" constant="10" id="4ya-cB-3T1"/>
+                                                        <constraint firstItem="DM4-99-Dit" firstAttribute="top" secondItem="Xkv-iO-zQH" secondAttribute="top" constant="10" id="BDA-Oh-HI5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="54t-wh-H66" secondAttribute="bottom" constant="10" id="XcW-h6-QgX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DM4-99-Dit" secondAttribute="bottom" constant="10" id="iiu-wg-uFM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="54t-wh-H66" secondAttribute="trailing" constant="16" id="jTT-uq-AH7"/>
+                                                        <constraint firstItem="DM4-99-Dit" firstAttribute="centerY" secondItem="Xkv-iO-zQH" secondAttribute="centerY" id="sOo-Ux-WHz"/>
+                                                        <constraint firstItem="54t-wh-H66" firstAttribute="top" secondItem="Xkv-iO-zQH" secondAttribute="top" constant="10" id="v78-fX-Na2"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <constraints>
+                                                    <constraint firstItem="DM4-99-Dit" firstAttribute="leading" secondItem="q1q-y6-crW" secondAttribute="leading" constant="16" id="dDA-Z0-Qcj"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="searchImageView" destination="DM4-99-Dit" id="dgb-fX-gcR"/>
+                                                    <outlet property="searchOverviewLabel" destination="k9j-yH-60G" id="Wti-hh-gfJ"/>
+                                                    <outlet property="searchSubtitleLabel" destination="ScK-P6-fDH" id="ZRP-PF-Ttx"/>
+                                                    <outlet property="searchTitleLabel" destination="0Ww-Kn-RpF" id="MNM-4X-nNT"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -58,10 +107,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="영화 검색" id="88d-RT-Jsm"/>
+                    <connections>
+                        <outlet property="searchBar" destination="kUi-hH-SoS" id="I85-ho-PVm"/>
+                        <outlet property="searchTableView" destination="aqA-ZT-cSi" id="ZNs-FJ-QS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lK-3e-kk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2909" y="-268"/>
+            <point key="canvasLocation" x="2908.6956521739135" y="-268.52678571428572"/>
         </scene>
         <!--TREND MEDIA-->
         <scene sceneID="tne-QT-ifu">
@@ -454,6 +507,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Grey's_Anatomy" width="350" height="525"/>
         <image name="Nevertheless" width="350" height="525"/>
         <image name="book_icon" width="512" height="512"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

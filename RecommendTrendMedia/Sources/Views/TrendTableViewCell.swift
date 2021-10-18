@@ -8,10 +8,11 @@
 import UIKit
 
 class TrendTableViewCell: UITableViewCell {
+  static let identifier: String = "trendCell"
+  
   @IBOutlet weak var userLabel: UILabel!
   @IBOutlet weak var userBackgroundImageView: UIImageView!
   @IBOutlet weak var menuCardView: UIView!
-  
   
   @IBOutlet weak var movieButton: UIButton!
   @IBOutlet weak var tvButton: UIButton!
