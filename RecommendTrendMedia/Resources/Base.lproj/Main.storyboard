@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -284,16 +285,31 @@
                                                                                 <constraint firstAttribute="height" constant="25" id="dWp-pK-yfb"/>
                                                                             </constraints>
                                                                         </stackView>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHQ-Cq-F7g">
+                                                                            <rect key="frame" x="308" y="16" width="40" height="40"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="tHQ-Cq-F7g" secondAttribute="height" multiplier="1:1" id="rLE-Xq-hxT"/>
+                                                                            </constraints>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="plain">
+                                                                                <imageReference key="image" image="paperclip" catalog="system" symbolScale="medium"/>
+                                                                            </buttonConfiguration>
+                                                                        </button>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.93339639900000004" green="0.92917484049999999" blue="0.94117873910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="cwL-Ii-N3B" firstAttribute="top" secondItem="0EW-1H-yAI" secondAttribute="top" id="2rd-GV-Dma"/>
                                                                         <constraint firstItem="tRY-Pc-dhM" firstAttribute="leading" secondItem="0EW-1H-yAI" secondAttribute="leading" constant="16" id="2zQ-aP-gAa"/>
                                                                         <constraint firstAttribute="width" secondItem="0EW-1H-yAI" secondAttribute="height" multiplier="1.5:1" id="CeH-Sl-302"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="tHQ-Cq-F7g" secondAttribute="trailing" constant="16" id="EPa-ZT-iQw"/>
                                                                         <constraint firstItem="cwL-Ii-N3B" firstAttribute="leading" secondItem="0EW-1H-yAI" secondAttribute="leading" id="WWp-Ag-zxH"/>
                                                                         <constraint firstAttribute="trailing" secondItem="cwL-Ii-N3B" secondAttribute="trailing" id="YfH-12-dgt"/>
+                                                                        <constraint firstItem="tHQ-Cq-F7g" firstAttribute="top" secondItem="0EW-1H-yAI" secondAttribute="top" constant="16" id="aVN-qg-Wms"/>
                                                                         <constraint firstAttribute="bottom" secondItem="cwL-Ii-N3B" secondAttribute="bottom" id="lsd-2w-dvo"/>
                                                                         <constraint firstAttribute="bottom" secondItem="tRY-Pc-dhM" secondAttribute="bottom" constant="16" id="qp0-FN-hFV"/>
+                                                                        <constraint firstItem="tHQ-Cq-F7g" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0EW-1H-yAI" secondAttribute="leading" constant="308" id="xSh-fB-KIE"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9k-t5-LEJ">
@@ -379,6 +395,7 @@
                                             <outlet property="rateLabel" destination="hPY-g5-w00" id="Rbr-Ul-3DH"/>
                                             <outlet property="releaseDateLabel" destination="Fdd-C2-Ytb" id="xsv-Kh-ufV"/>
                                             <outlet property="starringLabel" destination="lv9-jD-YgD" id="7uj-mb-Qyk"/>
+                                            <outlet property="webSiteButton" destination="tHQ-Cq-F7g" id="IPv-IK-Cq3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -596,10 +613,14 @@
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="movie_icon" width="512" height="512"/>
+        <image name="paperclip" catalog="system" width="121" height="128"/>
         <image name="profile_1" width="3456" height="4320"/>
         <image name="profile_4" width="2160" height="2700"/>
         <image name="profile_6" width="3840" height="2160"/>
         <image name="tv_icon" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

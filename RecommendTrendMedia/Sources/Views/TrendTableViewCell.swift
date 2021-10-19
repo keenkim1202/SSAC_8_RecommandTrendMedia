@@ -18,6 +18,7 @@ class TrendTableViewCell: UITableViewCell {
   @IBOutlet weak var tvButton: UIButton!
   @IBOutlet weak var bookButton: UIButton!
   
+  @IBOutlet weak var webSiteButton: UIButton!
   @IBOutlet weak var releaseDateLabel: UILabel!
   @IBOutlet weak var genreLabel: UILabel!
   @IBOutlet weak var backdropImageView: UIImageView!
@@ -39,11 +40,13 @@ class TrendTableViewCell: UITableViewCell {
   }
   
   func trendCellConfigure() {
+    webSiteButton.layer.cornerRadius = webSiteButton.layer.frame.size.width / 2
     posterCardView.layer.cornerRadius = CGFloat(8)
     movieInfoCardView.layer.cornerRadius = CGFloat(8)
-    backdropImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner] // 위만 둥글게
+
     posterCardView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner] // 위만 둥글게
     movieInfoCardView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // 아래만 둥글게
+    posterCardView.clipsToBounds = true
     setViewShadow(movieInfoCardView)
   }
 }
