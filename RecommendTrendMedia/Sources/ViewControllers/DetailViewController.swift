@@ -39,13 +39,23 @@ class DetailViewController: UIViewController {
     headerImageView.kf.setImage(with: URL(string: media.backdropImage), placeholder: UIImage(named: "profile_7"))
     posterImageView.image = UIImage(named: media.title)
   }
+  
+  // MARK: Action
+  @IBAction func onChevronButton(_ sender: UIButton) {
+    isOpen.toggle()
+    detailTableView.reloadSections(IndexSet(0...0), with: .automatic)
+  }
 }
 
 // MARK: Extension - TableViewDelegate
 extension DetailViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     if indexPath.section == 0 {
-      return tableView.estimatedRowHeight
+      if isOpen == false {
+        return 80
+      } else {
+        return tableView.estimatedRowHeight
+      }
     } else {
       return 80
     }
@@ -71,6 +81,12 @@ extension DetailViewController: UITableViewDataSource {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: OverviewTableViewCell.identifier) as? OverviewTableViewCell else { return UITableViewCell() }
       if let media = media {
         cell.overviewLabel.text = media.overview
+        if isOpen == true {
+          cell.chevronButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+        } else {
+          cell.chevronButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+
+        }
       } else {
         cell.overviewLabel.text = "줄거리 정보를 가져올 수 없습니다."
       }

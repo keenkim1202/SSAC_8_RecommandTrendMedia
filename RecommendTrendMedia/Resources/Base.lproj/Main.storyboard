@@ -482,56 +482,74 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="overviewCell" id="GPr-Cf-2e8" customClass="OverviewTableViewCell" customModule="RecommendTrendMedia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="251.5" width="414" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="251.5" width="414" height="109.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GPr-Cf-2e8" id="P6h-Pf-3cL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="줄거리 조잘조잘 재잘재잘 이러쿵 저러쿵 궁시렁궁시렁 줄거리 조잘조잘 재잘재잘 이러쿵 저러쿵 궁시렁궁시렁 줄거리 조잘조잘 재잘재잘 이러쿵 저러쿵 궁시렁궁시렁" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-QW-pdx">
-                                                    <rect key="frame" x="16" y="10" width="382" height="54.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7oG-Vc-AMO">
+                                                    <rect key="frame" x="25" y="10" width="364" height="89.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="줄거리 조잘조잘 재잘재잘 이러쿵 저러쿵 궁시렁궁시렁 줄거리 조잘조잘 재잘재잘 이러쿵 저러쿵 궁시렁궁시렁 줄거리 조잘조잘 재잘재잘 이러쿵 저러쿵 궁시렁궁시렁" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-QW-pdx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="364" height="54.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-gM-vgu">
+                                                            <rect key="frame" x="0.0" y="59.5" width="364" height="30"/>
+                                                            <color key="backgroundColor" red="1" green="0.80470482809999999" blue="0.81949654009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="DpW-pe-D0b"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="onChevronButton:" destination="qBA-Am-zWq" eventType="touchUpInside" id="L0U-CF-TCt"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="iCr-QW-pdx" secondAttribute="trailing" constant="16" id="AOg-wD-keK"/>
-                                                <constraint firstItem="iCr-QW-pdx" firstAttribute="leading" secondItem="P6h-Pf-3cL" secondAttribute="leading" constant="16" id="a1z-wW-YAE"/>
-                                                <constraint firstItem="iCr-QW-pdx" firstAttribute="top" secondItem="P6h-Pf-3cL" secondAttribute="top" constant="10" id="w4e-JS-5B9"/>
-                                                <constraint firstAttribute="bottom" secondItem="iCr-QW-pdx" secondAttribute="bottom" constant="10" id="wy3-hZ-nWa"/>
+                                                <constraint firstItem="7oG-Vc-AMO" firstAttribute="leading" secondItem="P6h-Pf-3cL" secondAttribute="leading" constant="25" id="94L-SH-pBG"/>
+                                                <constraint firstAttribute="bottom" secondItem="7oG-Vc-AMO" secondAttribute="bottom" constant="10" id="N9D-kU-beC"/>
+                                                <constraint firstAttribute="trailing" secondItem="7oG-Vc-AMO" secondAttribute="trailing" constant="25" id="njp-bg-sdY"/>
+                                                <constraint firstItem="7oG-Vc-AMO" firstAttribute="top" secondItem="P6h-Pf-3cL" secondAttribute="top" constant="10" id="zp5-Ec-aJ6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="chevronButton" destination="o6a-gM-vgu" id="Prx-1i-ZQE"/>
                                             <outlet property="overviewLabel" destination="iCr-QW-pdx" id="cGK-Kx-fe0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailCell" rowHeight="80" id="Naa-pc-88f" customClass="DetailTableViewCell" customModule="RecommendTrendMedia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="326" width="414" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailCell" rowHeight="80" id="qNf-3y-jag" customClass="DetailTableViewCell" customModule="RecommendTrendMedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="361" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Naa-pc-88f" id="AYJ-mO-Y6u">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qNf-3y-jag" id="XFS-DH-LKq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-Gy-5Yb">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eai-WV-Vfd">
                                                     <rect key="frame" x="16" y="10" width="382" height="60"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="profile_4" translatesAutoresizingMaskIntoConstraints="NO" id="3vG-42-4Zd">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="profile_4" translatesAutoresizingMaskIntoConstraints="NO" id="Cgo-AJ-tbj">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="3vG-42-4Zd" secondAttribute="height" multiplier="1:1" id="V0c-0r-VkO"/>
+                                                                <constraint firstAttribute="width" secondItem="Cgo-AJ-tbj" secondAttribute="height" multiplier="1:1" id="kgj-MU-LWz"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Sg-3W-bI0">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PFm-gv-8KQ">
                                                             <rect key="frame" x="70" y="0.0" width="312" height="60"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="배우 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIw-fm-cob">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="배우 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvj-HM-dt5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="312" height="30"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="역할 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCC-c3-B9a">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="역할 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-JM-MWo">
                                                                     <rect key="frame" x="0.0" y="30" width="312" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <nil key="textColor"/>
@@ -539,26 +557,26 @@
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="EIw-fm-cob" firstAttribute="leading" secondItem="1Sg-3W-bI0" secondAttribute="leading" id="P6Y-g4-bsU"/>
-                                                                <constraint firstAttribute="trailing" secondItem="TCC-c3-B9a" secondAttribute="trailing" id="WJv-Ha-hsB"/>
-                                                                <constraint firstAttribute="trailing" secondItem="EIw-fm-cob" secondAttribute="trailing" id="c2x-yE-OQE"/>
-                                                                <constraint firstItem="TCC-c3-B9a" firstAttribute="leading" secondItem="1Sg-3W-bI0" secondAttribute="leading" id="i9K-gf-cuo"/>
+                                                                <constraint firstItem="Mvj-HM-dt5" firstAttribute="leading" secondItem="PFm-gv-8KQ" secondAttribute="leading" id="41R-7g-Gc2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="S7T-JM-MWo" secondAttribute="trailing" id="5Ac-zi-v2R"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Mvj-HM-dt5" secondAttribute="trailing" id="VC5-yW-kIS"/>
+                                                                <constraint firstItem="S7T-JM-MWo" firstAttribute="leading" secondItem="PFm-gv-8KQ" secondAttribute="leading" id="txh-iC-TAB"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="KCE-Gy-5Yb" firstAttribute="top" secondItem="AYJ-mO-Y6u" secondAttribute="top" constant="10" id="CAy-tc-pp0"/>
-                                                <constraint firstAttribute="trailing" secondItem="KCE-Gy-5Yb" secondAttribute="trailing" constant="16" id="OjN-OX-DhL"/>
-                                                <constraint firstItem="KCE-Gy-5Yb" firstAttribute="leading" secondItem="AYJ-mO-Y6u" secondAttribute="leading" constant="16" id="dx5-wO-NVc"/>
-                                                <constraint firstAttribute="bottom" secondItem="KCE-Gy-5Yb" secondAttribute="bottom" constant="10" id="gbV-UD-YzP"/>
+                                                <constraint firstItem="eai-WV-Vfd" firstAttribute="top" secondItem="XFS-DH-LKq" secondAttribute="top" constant="10" id="1ui-nk-7hi"/>
+                                                <constraint firstItem="eai-WV-Vfd" firstAttribute="leading" secondItem="XFS-DH-LKq" secondAttribute="leading" constant="16" id="4jC-wR-DRV"/>
+                                                <constraint firstAttribute="trailing" secondItem="eai-WV-Vfd" secondAttribute="trailing" constant="16" id="MGl-gf-22L"/>
+                                                <constraint firstAttribute="bottom" secondItem="eai-WV-Vfd" secondAttribute="bottom" constant="10" id="bVT-uv-6fi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="detailImageView" destination="3vG-42-4Zd" id="xib-Gt-6wN"/>
-                                            <outlet property="detailSubtitleLabel" destination="TCC-c3-B9a" id="aCg-FK-4v0"/>
-                                            <outlet property="detailTitleLabel" destination="EIw-fm-cob" id="z5X-0Q-CpT"/>
+                                            <outlet property="detailImageView" destination="Cgo-AJ-tbj" id="7Nh-PS-NSj"/>
+                                            <outlet property="detailSubtitleLabel" destination="S7T-JM-MWo" id="2Z6-bL-IMf"/>
+                                            <outlet property="detailTitleLabel" destination="Mvj-HM-dt5" id="8I5-ym-QbB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -583,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te4-iX-dRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868" y="119"/>
+            <point key="canvasLocation" x="2866.666666666667" y="118.52678571428571"/>
         </scene>
         <!--영화제목-->
         <scene sceneID="nLS-ji-aD4">
@@ -759,6 +777,7 @@
         <image name="Grey's_Anatomy" width="350" height="525"/>
         <image name="Nevertheless" width="350" height="525"/>
         <image name="book_icon" width="512" height="512"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

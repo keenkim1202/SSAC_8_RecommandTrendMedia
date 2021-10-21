@@ -9,6 +9,7 @@ import UIKit
 
 class OverviewTableViewCell: UITableViewCell {
   static let identifier: String = "overviewCell"
-
+  
+  @IBOutlet weak var chevronButton: UIButton!
   @IBOutlet weak var overviewLabel: UILabel!
 }
