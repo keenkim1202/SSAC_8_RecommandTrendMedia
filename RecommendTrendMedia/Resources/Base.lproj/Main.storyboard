@@ -204,7 +204,6 @@
                                                         <constraint firstAttribute="trailing" secondItem="ZqP-sC-luj" secondAttribute="trailing" constant="30" id="Jgg-wt-qb7"/>
                                                         <constraint firstItem="ZqP-sC-luj" firstAttribute="centerX" secondItem="9Ah-vF-KOY" secondAttribute="centerX" id="RMD-Ul-Olo"/>
                                                         <constraint firstItem="ZqP-sC-luj" firstAttribute="centerY" secondItem="9Ah-vF-KOY" secondAttribute="centerY" id="fyC-g8-53e"/>
-                                                        <constraint firstAttribute="width" secondItem="9Ah-vF-KOY" secondAttribute="height" multiplier="3:1" id="o66-gJ-lkY"/>
                                                         <constraint firstItem="ZqP-sC-luj" firstAttribute="leading" secondItem="9Ah-vF-KOY" secondAttribute="leading" constant="30" id="y2v-yo-fSZ"/>
                                                     </constraints>
                                                 </view>
