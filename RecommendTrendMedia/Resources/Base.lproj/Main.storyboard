@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lK-3e-kk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908.6956521739135" y="-268.52678571428572"/>
+            <point key="canvasLocation" x="4728.985507246377" y="-268.52678571428572"/>
         </scene>
         <!--TREND MEDIA-->
         <scene sceneID="tne-QT-ifu">
@@ -296,6 +296,9 @@
                                                                             <buttonConfiguration key="configuration" style="plain">
                                                                                 <imageReference key="image" image="paperclip" catalog="system" symbolScale="medium"/>
                                                                             </buttonConfiguration>
+                                                                            <connections>
+                                                                                <action selector="onWebLinkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpa-Fe-7l2"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -549,6 +552,41 @@
             </objects>
             <point key="canvasLocation" x="2908.6956521739135" y="474.77678571428567"/>
         </scene>
+        <!--영화제목-->
+        <scene sceneID="nLS-ji-aD4">
+            <objects>
+                <viewController storyboardIdentifier="webLinkVC" id="7en-Ug-ccG" customClass="WebLinkViewController" customModule="RecommendTrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wka-W8-qG0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9D-Gw-6bI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hwY-cF-lOf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hwY-cF-lOf" firstAttribute="bottom" secondItem="J9D-Gw-6bI" secondAttribute="bottom" id="WTS-aB-nwd"/>
+                            <constraint firstItem="J9D-Gw-6bI" firstAttribute="top" secondItem="hwY-cF-lOf" secondAttribute="top" id="YY7-16-98u"/>
+                            <constraint firstItem="J9D-Gw-6bI" firstAttribute="leading" secondItem="hwY-cF-lOf" secondAttribute="leading" id="er9-IP-QQ1"/>
+                            <constraint firstItem="hwY-cF-lOf" firstAttribute="trailing" secondItem="J9D-Gw-6bI" secondAttribute="trailing" id="iMN-0A-Egs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="영화제목" id="ask-hI-UQZ"/>
+                    <connections>
+                        <outlet property="webView" destination="J9D-Gw-6bI" id="siJ-Im-ZnH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUL-NN-mer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868.115942028986" y="-686.38392857142856"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="SpI-D8-NdR">
             <objects>
@@ -601,7 +639,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2Z-TO-7dV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="-268"/>
+            <point key="canvasLocation" x="3797.1014492753625" y="-268.52678571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ch4-FW-UzP">
+            <objects>
+                <navigationController storyboardIdentifier="webLinkNC" automaticallyAdjustsScrollViewInsets="NO" id="I2A-BM-eeh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cMg-3C-YIO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7en-Ug-ccG" kind="relationship" relationship="rootViewController" id="uV0-FU-TWj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGI-L6-YFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="-686.38392857142856"/>
         </scene>
     </scenes>
     <resources>

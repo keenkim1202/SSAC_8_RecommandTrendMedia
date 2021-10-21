@@ -19,19 +19,27 @@ class TrendViewController: UIViewController {
   // MARK: UI
   @IBOutlet weak var trendTableView: UITableView!
   
+  
   // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
   }
   
-  // MARK: Action
+  // MARK: Actions
   @IBAction func onSearchButton(_ sender: UIBarButtonItem) {
     guard let searchVC = storyboard?.instantiateViewController(withIdentifier: "searchVC") as? SearchViewController else { return }
     searchVC.titleSpace = "영화 검색"
     self.navigationController?.pushViewController(searchVC, animated: true)
   }
   
+  @IBAction func onWebLinkButton(_ sender: UIButton) {
+    guard let webLinkNC = self.storyboard?.instantiateViewController(withIdentifier: "webLinkNC") as? UINavigationController else { return}
+    guard let vc = webLinkNC.viewControllers.first as? WebLinkViewController else { return }
+    
+    vc.navigationTitle = mediaInfo.tvShow[sender.tag].title
+    self.present(webLinkNC, animated: true, completion: nil)
+  }
 }
 
 // MARK: Extension
@@ -76,7 +84,7 @@ extension TrendViewController: UITableViewDataSource {
       cell.backdropImageView.image = UIImage(named: medias.title.replacingOccurrences(of: " ", with: "_"))
       cell.rateLabel.text = "\(medias.rate)"
       cell.starringLabel.text = medias.starring
-      
+      cell.webSiteButton.tag = indexPath.row
       return cell
     }
   }
