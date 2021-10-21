@@ -55,6 +55,7 @@ extension TrendViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detailVC") as? DetailViewController else { return }
+    detailVC.media = mediaInfo.tvShow[indexPath.row]
     self.navigationController?.pushViewController(detailVC, animated: true)
   }
 }

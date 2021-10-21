@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lK-3e-kk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4728.985507246377" y="-268.52678571428572"/>
+            <point key="canvasLocation" x="2868" y="871"/>
         </scene>
         <!--TREND MEDIA-->
         <scene sceneID="tne-QT-ifu">
@@ -549,7 +549,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te4-iX-dRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908.6956521739135" y="474.77678571428567"/>
+            <point key="canvasLocation" x="2868" y="119"/>
         </scene>
         <!--영화제목-->
         <scene sceneID="nLS-ji-aD4">
@@ -620,7 +620,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smG-ij-xi3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="475"/>
+            <point key="canvasLocation" x="1958" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XmW-hk-8uc">
@@ -638,7 +638,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2Z-TO-7dV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3797.1014492753625" y="-268.52678571428572"/>
+            <point key="canvasLocation" x="1958" y="871"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ch4-FW-UzP">
