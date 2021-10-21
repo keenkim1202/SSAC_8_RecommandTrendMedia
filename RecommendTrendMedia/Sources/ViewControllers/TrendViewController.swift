@@ -27,8 +27,15 @@ class TrendViewController: UIViewController {
   }
   
   // MARK: Actions
+  @IBAction func onPinButton(_ sender: UIBarButtonItem) {
+    guard let theaterNC = self.storyboard?.instantiateViewController(withIdentifier: "theaterNC") as? UINavigationController else { return}
+
+    theaterNC.modalPresentationStyle = .fullScreen
+    self.present(theaterNC, animated: true, completion: nil)
+  }
+  
   @IBAction func onSearchButton(_ sender: UIBarButtonItem) {
-    guard let searchVC = storyboard?.instantiateViewController(withIdentifier: "searchVC") as? SearchViewController else { return }
+    guard let searchVC = self.storyboard?.instantiateViewController(withIdentifier: "searchVC") as? SearchViewController else { return }
     searchVC.titleSpace = "영화 검색"
     self.navigationController?.pushViewController(searchVC, animated: true)
   }

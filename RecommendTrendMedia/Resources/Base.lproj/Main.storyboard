@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -417,9 +418,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TREND MEDIA" id="Tek-bC-l3O">
-                        <barButtonItem key="leftBarButtonItem" image="list.bullet" catalog="system" id="m0d-Wy-znS">
-                            <color key="tintColor" systemColor="systemPinkColor"/>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem image="list.bullet" catalog="system" id="m0d-Wy-znS">
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="mappin.circle" catalog="system" id="cGG-DS-e76">
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="onPinButton:" destination="BYZ-38-t0r" id="vu0-RM-Cpe"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="pEx-tf-aI6">
                             <color key="tintColor" systemColor="systemPinkColor"/>
                             <connections>
@@ -584,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUL-NN-mer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868.115942028986" y="-686.38392857142856"/>
+            <point key="canvasLocation" x="2867" y="-719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SpI-D8-NdR">
@@ -640,6 +649,49 @@
             </objects>
             <point key="canvasLocation" x="1958" y="871"/>
         </scene>
+        <!--상영관 찾기-->
+        <scene sceneID="euc-Ej-6g6">
+            <objects>
+                <viewController storyboardIdentifier="theaterVC" id="gMm-NN-1qO" customClass="TheaterMapViewController" customModule="RecommendTrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q1A-PT-5GQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o7g-Fy-CZJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ix6-sS-a7A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o7g-Fy-CZJ" firstAttribute="top" secondItem="Ix6-sS-a7A" secondAttribute="top" id="OaO-d9-QPi"/>
+                            <constraint firstItem="Ix6-sS-a7A" firstAttribute="bottom" secondItem="o7g-Fy-CZJ" secondAttribute="bottom" id="Wda-oF-tud"/>
+                            <constraint firstItem="o7g-Fy-CZJ" firstAttribute="leading" secondItem="Ix6-sS-a7A" secondAttribute="leading" id="WxQ-pW-i0y"/>
+                            <constraint firstItem="Ix6-sS-a7A" firstAttribute="trailing" secondItem="o7g-Fy-CZJ" secondAttribute="trailing" id="rbG-ky-lML"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="상영관 찾기" id="cxj-f3-bwB">
+                        <barButtonItem key="leftBarButtonItem" title="닫기" id="urb-qv-qcB">
+                            <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="onExitButton:" destination="gMm-NN-1qO" id="LgY-uo-2c6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="필터" id="feP-JA-AjN">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="onFilterbutton:" destination="gMm-NN-1qO" id="gtK-bI-4Yp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="o7g-Fy-CZJ" id="H3a-xP-d7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQ5-xB-kb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="-719"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ch4-FW-UzP">
             <objects>
@@ -656,7 +708,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGI-L6-YFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="-686.38392857142856"/>
+            <point key="canvasLocation" x="1958" y="-719"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JaH-8b-qAL">
+            <objects>
+                <navigationController storyboardIdentifier="theaterNC" automaticallyAdjustsScrollViewInsets="NO" id="j1b-0K-Ara" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bAs-JQ-1rh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gMm-NN-1qO" kind="relationship" relationship="rootViewController" id="smK-wQ-TUr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXB-5U-441" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-718"/>
         </scene>
     </scenes>
     <resources>
@@ -667,12 +737,16 @@
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mappin.circle" catalog="system" width="128" height="121"/>
         <image name="movie_icon" width="512" height="512"/>
         <image name="paperclip" catalog="system" width="121" height="128"/>
         <image name="profile_1" width="3456" height="4320"/>
         <image name="profile_4" width="2160" height="2700"/>
         <image name="profile_6" width="3840" height="2160"/>
         <image name="tv_icon" width="512" height="512"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C0CE9972721295700809F41 /* WebLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE9962721295700809F41 /* WebLinkViewController.swift */; };
 		1C0CE99A27213BF100809F41 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C0CE99927213BF100809F41 /* Kingfisher */; };
+		1C0CE99C2721432D00809F41 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */; };
 		1C40C305271BF8D600CB1C95 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */; };
 		1C40C309271C106C00CB1C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C308271C106C00CB1C95 /* User.swift */; };
 		1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1C0CE9962721295700809F41 /* WebLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLinkViewController.swift; sourceTree = "<group>"; };
+		1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
 		1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
 		1C40C308271C106C00CB1C95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1C8D5191271BDD7500F1A3B2 /* RecommendTrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecommendTrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				1C8D51A8271BDDAD00F1A3B2 /* SearchViewController.swift */,
 				1C8D51AA271BDDB800F1A3B2 /* DetailViewController.swift */,
 				1C0CE9962721295700809F41 /* WebLinkViewController.swift */,
+				1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */,
 				1C8D51AF271BDF9400F1A3B2 /* DetailTableViewCell.swift in Sources */,
 				1C8D51AB271BDDB800F1A3B2 /* DetailViewController.swift in Sources */,
+				1C0CE99C2721432D00809F41 /* TheaterMapViewController.swift in Sources */,
 				1C8D51AD271BDE5E00F1A3B2 /* SearchTableViewCell.swift in Sources */,
 				1C8D51A9271BDDAD00F1A3B2 /* SearchViewController.swift in Sources */,
 				1C8D51B6271BE07000F1A3B2 /* MediaInfo.swift in Sources */,
