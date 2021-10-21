@@ -371,11 +371,15 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="0EW-1H-yAI" secondAttribute="trailing" id="ky2-jJ-ZWT"/>
                                                                 <constraint firstItem="0EW-1H-yAI" firstAttribute="leading" secondItem="dLJ-Wz-nBt" secondAttribute="leading" id="pfa-Ly-8oN"/>
+                                                                <constraint firstAttribute="trailing" secondItem="J9k-t5-LEJ" secondAttribute="trailing" id="tBx-HI-LWh"/>
+                                                                <constraint firstItem="J9k-t5-LEJ" firstAttribute="leading" secondItem="dLJ-Wz-nBt" secondAttribute="leading" id="vVK-HB-L8Q"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="dLJ-Wz-nBt" firstAttribute="leading" secondItem="W5K-F1-juN" secondAttribute="leading" id="Nel-or-ShD"/>
                                                         <constraint firstItem="HNS-Hc-2XJ" firstAttribute="leading" secondItem="W5K-F1-juN" secondAttribute="leading" id="WJi-L9-Thd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dLJ-Wz-nBt" secondAttribute="trailing" id="d63-vU-Bk5"/>
                                                         <constraint firstAttribute="trailing" secondItem="HNS-Hc-2XJ" secondAttribute="trailing" id="fT9-tq-cdU"/>
                                                         <constraint firstAttribute="trailing" secondItem="Fdd-C2-Ytb" secondAttribute="trailing" id="h3z-Yk-n90"/>
                                                         <constraint firstItem="Fdd-C2-Ytb" firstAttribute="leading" secondItem="W5K-F1-juN" secondAttribute="leading" id="ySl-E2-TTm"/>
