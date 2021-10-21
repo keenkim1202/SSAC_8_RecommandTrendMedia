@@ -19,7 +19,6 @@ class TrendViewController: UIViewController {
   // MARK: UI
   @IBOutlet weak var trendTableView: UITableView!
   
-  
   // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,8 +34,15 @@ class TrendViewController: UIViewController {
   }
   
   // MARK: Actions
+  // menu button
+  @IBAction func onBookMenu(_ sender: UIButton) {
+    guard let bookVC = self.storyboard?.instantiateViewController(withIdentifier: "bookVC") as? BookViewController else { return }
+    self.navigationController?.pushViewController(bookVC, animated: true)
+  }
+  
+  // navigationBar Button
   @IBAction func onPinButton(_ sender: UIBarButtonItem) {
-    guard let theaterNC = self.storyboard?.instantiateViewController(withIdentifier: "theaterNC") as? UINavigationController else { return}
+    guard let theaterNC = self.storyboard?.instantiateViewController(withIdentifier: "theaterNC") as? UINavigationController else { return }
 
     theaterNC.modalPresentationStyle = .fullScreen
     self.present(theaterNC, animated: true, completion: nil)
@@ -49,7 +55,7 @@ class TrendViewController: UIViewController {
   }
   
   @IBAction func onWebLinkButton(_ sender: UIButton) {
-    guard let webLinkNC = self.storyboard?.instantiateViewController(withIdentifier: "webLinkNC") as? UINavigationController else { return}
+    guard let webLinkNC = self.storyboard?.instantiateViewController(withIdentifier: "webLinkNC") as? UINavigationController else { return }
     guard let vc = webLinkNC.viewControllers.first as? WebLinkViewController else { return }
     
     vc.navigationTitle = mediaInfo.tvShow[sender.tag].title

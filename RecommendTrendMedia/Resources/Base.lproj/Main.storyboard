@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -196,6 +197,9 @@
                                                                     <color key="tintColor" systemColor="systemIndigoColor"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="book_icon"/>
+                                                                    <connections>
+                                                                        <action selector="onBookMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAb-Ag-IAs"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -447,6 +451,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Book View Controller-->
+        <scene sceneID="QH5-68-cUd">
+            <objects>
+                <viewController storyboardIdentifier="bookVC" id="aJd-qy-j9I" customClass="BookViewController" customModule="RecommendTrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpU-8w-TpW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tiv-7D-zUr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="opJ-pb-Pum">
+                                    <size key="itemSize" width="160" height="163"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookCell" id="HM1-OH-Zcr" customClass="BookCollectionViewCell" customModule="RecommendTrendMedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8eh-xp-s3U">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="BookTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LK-Cc-P2F">
+                                                    <rect key="frame" x="10" y="10" width="160" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A_Tale_Dark_&amp;_Grimm" translatesAutoresizingMaskIntoConstraints="NO" id="tr5-vB-IYq">
+                                                    <rect key="frame" x="68.5" y="37" width="95.5" height="143"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="tr5-vB-IYq" secondAttribute="height" multiplier="1:1.5" id="NKn-LS-wHb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mft-ew-JUm">
+                                                    <rect key="frame" x="16" y="148" width="20" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.93488720910000001" green="0.93037084579999996" blue="0.93940357249999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="6LK-Cc-P2F" firstAttribute="leading" secondItem="8eh-xp-s3U" secondAttribute="leading" constant="10" id="1y8-eJ-5h4"/>
+                                                <constraint firstAttribute="trailing" secondItem="tr5-vB-IYq" secondAttribute="trailing" constant="16" id="4jL-34-qpx"/>
+                                                <constraint firstAttribute="bottom" secondItem="mft-ew-JUm" secondAttribute="bottom" constant="16" id="4ys-x9-nTV"/>
+                                                <constraint firstAttribute="bottom" secondItem="tr5-vB-IYq" secondAttribute="bottom" id="8hl-MU-nKM"/>
+                                                <constraint firstItem="tr5-vB-IYq" firstAttribute="top" secondItem="6LK-Cc-P2F" secondAttribute="bottom" constant="10" id="IVd-Ei-RB9"/>
+                                                <constraint firstItem="6LK-Cc-P2F" firstAttribute="top" secondItem="8eh-xp-s3U" secondAttribute="top" constant="10" id="Pe3-Ow-e6C"/>
+                                                <constraint firstAttribute="trailing" secondItem="6LK-Cc-P2F" secondAttribute="trailing" constant="10" id="QQb-dt-Dj8"/>
+                                                <constraint firstItem="tr5-vB-IYq" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mft-ew-JUm" secondAttribute="trailing" constant="32.5" id="aKI-SX-SMd"/>
+                                                <constraint firstItem="mft-ew-JUm" firstAttribute="leading" secondItem="8eh-xp-s3U" secondAttribute="leading" constant="16" id="oOl-lv-ZK4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="180"/>
+                                        <connections>
+                                            <outlet property="bookCoverImageView" destination="tr5-vB-IYq" id="ovc-J7-Re6"/>
+                                            <outlet property="bookRateLabel" destination="mft-ew-JUm" id="Gwj-bn-lIU"/>
+                                            <outlet property="bookTitleLabel" destination="6LK-Cc-P2F" id="gVI-Nj-Ajn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ias-wd-BzI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tiv-7D-zUr" firstAttribute="top" secondItem="Ias-wd-BzI" secondAttribute="top" id="Sh3-7u-QaY"/>
+                            <constraint firstItem="tiv-7D-zUr" firstAttribute="leading" secondItem="Ias-wd-BzI" secondAttribute="leading" id="cah-zo-EB2"/>
+                            <constraint firstItem="Ias-wd-BzI" firstAttribute="bottom" secondItem="tiv-7D-zUr" secondAttribute="bottom" id="ech-hf-PHm"/>
+                            <constraint firstItem="Ias-wd-BzI" firstAttribute="trailing" secondItem="tiv-7D-zUr" secondAttribute="trailing" id="nfG-wD-ivO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookCollectionView" destination="tiv-7D-zUr" id="A7V-g6-Urh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixH-00-sap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="864.50892857142856"/>
         </scene>
         <!--출연 / 제작-->
         <scene sceneID="4wi-xJ-7d2">
@@ -777,6 +865,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="A_Tale_Dark_&amp;_Grimm" width="182" height="276"/>
         <image name="Alice_in_Borderland" width="350" height="525"/>
         <image name="Grey's_Anatomy" width="350" height="525"/>
         <image name="Nevertheless" width="350" height="525"/>

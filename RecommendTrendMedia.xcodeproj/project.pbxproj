@@ -11,6 +11,9 @@
 		1C0CE99A27213BF100809F41 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C0CE99927213BF100809F41 /* Kingfisher */; };
 		1C0CE99C2721432D00809F41 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */; };
 		1C0CE99E2721480A00809F41 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE99D2721480A00809F41 /* OverviewTableViewCell.swift */; };
+		1C0CE9A027215BA000809F41 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE99F27215BA000809F41 /* BookViewController.swift */; };
+		1C0CE9A227215C0900809F41 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE9A127215C0900809F41 /* BookCollectionViewCell.swift */; };
+		1C0CE9A527215FCF00809F41 /* UIColor++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */; };
 		1C40C305271BF8D600CB1C95 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */; };
 		1C40C309271C106C00CB1C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C308271C106C00CB1C95 /* User.swift */; };
 		1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */; };
@@ -31,6 +34,9 @@
 		1C0CE9962721295700809F41 /* WebLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLinkViewController.swift; sourceTree = "<group>"; };
 		1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
 		1C0CE99D2721480A00809F41 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
+		1C0CE99F27215BA000809F41 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		1C0CE9A127215C0900809F41 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor++Extension.swift"; sourceTree = "<group>"; };
 		1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
 		1C40C308271C106C00CB1C95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1C8D5191271BDD7500F1A3B2 /* RecommendTrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecommendTrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0CE9A327215FB000809F41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1C8D5188271BDD7500F1A3B2 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +115,7 @@
 		1C8D51B1271BDFA600F1A3B2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1C0CE9A327215FB000809F41 /* Extensions */,
 				1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */,
 				1C8D5196271BDD7500F1A3B2 /* SceneDelegate.swift */,
 				1C8D51B9271BE11200F1A3B2 /* Model */,
@@ -126,6 +141,7 @@
 				1C8D51AA271BDDB800F1A3B2 /* DetailViewController.swift */,
 				1C0CE9962721295700809F41 /* WebLinkViewController.swift */,
 				1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */,
+				1C0CE99F27215BA000809F41 /* BookViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -137,6 +153,7 @@
 				1C8D51AC271BDE5E00F1A3B2 /* SearchTableViewCell.swift */,
 				1C8D51AE271BDF9400F1A3B2 /* DetailTableViewCell.swift */,
 				1C0CE99D2721480A00809F41 /* OverviewTableViewCell.swift */,
+				1C0CE9A127215C0900809F41 /* BookCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,9 +261,12 @@
 				1C8D51AB271BDDB800F1A3B2 /* DetailViewController.swift in Sources */,
 				1C0CE99C2721432D00809F41 /* TheaterMapViewController.swift in Sources */,
 				1C8D51AD271BDE5E00F1A3B2 /* SearchTableViewCell.swift in Sources */,
+				1C0CE9A227215C0900809F41 /* BookCollectionViewCell.swift in Sources */,
+				1C0CE9A527215FCF00809F41 /* UIColor++Extension.swift in Sources */,
 				1C8D51A9271BDDAD00F1A3B2 /* SearchViewController.swift in Sources */,
 				1C8D51B6271BE07000F1A3B2 /* MediaInfo.swift in Sources */,
 				1C8D5197271BDD7500F1A3B2 /* SceneDelegate.swift in Sources */,
+				1C0CE9A027215BA000809F41 /* BookViewController.swift in Sources */,
 				1C8D51B8271BE0CC00F1A3B2 /* TvShow.swift in Sources */,
 				1C40C309271C106C00CB1C95 /* User.swift in Sources */,
 			);
