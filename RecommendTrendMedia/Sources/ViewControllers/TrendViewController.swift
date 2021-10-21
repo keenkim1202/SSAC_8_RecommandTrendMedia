@@ -26,6 +26,14 @@ class TrendViewController: UIViewController {
     
   }
   
+  func convertTitleToImageName(_ base: String, _ occurrences: [String]) -> String {
+    var converted = base
+    for occurrence in occurrences {
+      converted = converted.replacingOccurrences(of: String(occurrence), with: "_")
+    }
+    return converted
+  }
+  
   // MARK: Actions
   @IBAction func onPinButton(_ sender: UIBarButtonItem) {
     guard let theaterNC = self.storyboard?.instantiateViewController(withIdentifier: "theaterNC") as? UINavigationController else { return}
@@ -89,7 +97,7 @@ extension TrendViewController: UITableViewDataSource {
       cell.releaseDateLabel.text = medias.releaseDate
       cell.genreLabel.text = "#\(medias.genre)"
       cell.movieTitleLabel.text = medias.title
-      cell.backdropImageView.image = UIImage(named: medias.title.replacingOccurrences(of: " ", with: "_"))
+      cell.backdropImageView.image = UIImage(named: convertTitleToImageName(medias.title, [" ", ":"]))
       cell.rateLabel.text = "\(medias.rate)"
       cell.starringLabel.text = medias.starring
       cell.webSiteButton.tag = indexPath.row
