@@ -75,11 +75,14 @@ extension TrendViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detailVC") as? DetailViewController else { return }
-    detailVC.media = mediaInfo.tvShow[indexPath.row]
-    self.navigationController?.pushViewController(detailVC, animated: true)
+    if indexPath.section == 1 {
+      guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detailVC") as? DetailViewController else { return }
+      detailVC.media = mediaInfo.tvShow[indexPath.row]
+      self.navigationController?.pushViewController(detailVC, animated: true)
+    }
   }
 }
+
 
 // MARK: - UITableViewDataSource
 extension TrendViewController: UITableViewDataSource {
@@ -96,6 +99,7 @@ extension TrendViewController: UITableViewDataSource {
       cell.userCellConfigure()
       cell.userBackgroundImageView.image = UIImage(named: backgroundImage)
       cell.userLabel.text = "hi! user."
+      cell.selectionStyle = .none
       return cell
     } else {
       guard let cell = trendTableView.dequeueReusableCell(withIdentifier: "trendCell") as? TrendTableViewCell else { return UITableViewCell() }
@@ -107,6 +111,7 @@ extension TrendViewController: UITableViewDataSource {
       cell.rateLabel.text = "\(medias.rate)"
       cell.starringLabel.text = medias.starring
       cell.webSiteButton.tag = indexPath.row
+      cell.selectionStyle = .none
       return cell
     }
   }
