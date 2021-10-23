@@ -9,6 +9,10 @@ import UIKit
 
 extension UIColor {
   class var ramdomColor: UIColor {
-    return UIColor(red: CGFloat.random(in: 0.7...1), green: CGFloat.random(in: 0.7...1), blue: CGFloat.random(in: 0.7...1), alpha: 1)
+    return UIColor(
+      red: CGFloat.random(in: 0.7...1),
+      green: CGFloat.random(in: 0.7...1),
+      blue: CGFloat.random(in: 0.7...1), alpha: 1
+    )
   }
 }

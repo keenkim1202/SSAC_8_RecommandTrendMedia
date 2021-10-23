@@ -25,14 +25,6 @@ class TrendViewController: UIViewController {
     
   }
   
-  func convertTitleToImageName(_ base: String, _ occurrences: [String]) -> String {
-    var converted = base
-    for occurrence in occurrences {
-      converted = converted.replacingOccurrences(of: String(occurrence), with: "_")
-    }
-    return converted
-  }
-  
   // MARK: Actions
   // menu button
   @IBAction func onBookMenu(_ sender: UIButton) {
@@ -106,7 +98,7 @@ extension TrendViewController: UITableViewDataSource {
       cell.releaseDateLabel.text = medias.releaseDate
       cell.genreLabel.text = "#\(medias.genre)"
       cell.movieTitleLabel.text = medias.title
-      cell.backdropImageView.image = UIImage(named: convertTitleToImageName(medias.title, [" ", ":"]))
+      cell.backdropImageView.image = UIImage(named: medias.title.replaceTargetsToReplacement([" ", ":"], "_"))
       cell.rateLabel.text = "\(medias.rate)"
       cell.starringLabel.text = medias.starring
       cell.webSiteButton.tag = indexPath.row

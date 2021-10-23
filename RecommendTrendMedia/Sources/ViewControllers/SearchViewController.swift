@@ -34,14 +34,6 @@ class SearchViewController: UIViewController {
   @objc func vcDismiss() {
      self.navigationController?.popViewController(animated: true)
    }
-  
-  func convertTitleToImageName(_ base: String, _ occurrences: [String]) -> String {
-    var converted = base
-    for occurrence in occurrences {
-      converted = converted.replacingOccurrences(of: String(occurrence), with: "_")
-    }
-    return converted
-  }
 }
 
 // MARK: Extension - UITableViewDelegate
@@ -60,7 +52,7 @@ extension SearchViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier) as? SearchTableViewCell else { return UITableViewCell() }
     let media = mediaInfo.tvShow[indexPath.row]
-    cell.searchImageView.image = UIImage(named: convertTitleToImageName(media.title, [" ", ":"]))
+    cell.searchImageView.image = UIImage(named: media.title.replaceTargetsToReplacement([" ", ":"], "_"))
     cell.searchTitleLabel.text = media.title
     cell.searchReleaseDateLabel.text = media.releaseDate
     cell.searchOverviewLabel.text = media.overview

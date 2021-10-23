@@ -38,15 +38,7 @@ class DetailViewController: UIViewController {
   
   func configureHeaderImage(_ media: TvShow) {
     headerImageView.kf.setImage(with: URL(string: media.backdropImage), placeholder: UIImage(named: "profile_7"))
-    posterImageView.image = UIImage(named: convertTitleToImageName(media.title, [" ", ":"]))
-  }
-  
-  func convertTitleToImageName(_ base: String, _ occurrences: [String]) -> String {
-    var converted = base
-    for occurrence in occurrences {
-      converted = converted.replacingOccurrences(of: String(occurrence), with: "_")
-    }
-    return converted
+    posterImageView.image = UIImage(named: media.title.replaceTargetsToReplacement([" ", ":"], "_"))
   }
   
   // MARK: Action
