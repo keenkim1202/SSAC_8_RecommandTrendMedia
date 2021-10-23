@@ -11,7 +11,6 @@ class SearchViewController: UIViewController {
   
   // MARK: Properties
   let mediaInfo = MediaInfo()
-  var titleSpace: String?
   
   // MARK: UI
   @IBOutlet weak var searchBar: UISearchBar!
@@ -27,7 +26,7 @@ class SearchViewController: UIViewController {
   }
   
   func naviConfigure() {
-    title = titleSpace
+    self.title = "영화 검색"
     navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "multiply"), style: .plain, target: self, action: #selector(vcDismiss))
     navigationItem.leftBarButtonItem?.tintColor = .systemRed
   }

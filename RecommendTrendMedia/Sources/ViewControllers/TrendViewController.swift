@@ -50,7 +50,6 @@ class TrendViewController: UIViewController {
   
   @IBAction func onSearchButton(_ sender: UIBarButtonItem) {
     guard let searchVC = self.storyboard?.instantiateViewController(withIdentifier: "searchVC") as? SearchViewController else { return }
-    searchVC.titleSpace = "영화 검색"
     self.navigationController?.pushViewController(searchVC, animated: true)
   }
   
