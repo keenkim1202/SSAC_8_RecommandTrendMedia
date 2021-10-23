@@ -82,8 +82,8 @@
                                                 <connections>
                                                     <outlet property="searchImageView" destination="DM4-99-Dit" id="dgb-fX-gcR"/>
                                                     <outlet property="searchOverviewLabel" destination="k9j-yH-60G" id="Wti-hh-gfJ"/>
-                                                    <outlet property="searchSubtitleLabel" destination="ScK-P6-fDH" id="ZRP-PF-Ttx"/>
-                                                    <outlet property="searchTitleLabel" destination="0Ww-Kn-RpF" id="MNM-4X-nNT"/>
+                                                    <outlet property="searchReleaseDateLabel" destination="ScK-P6-fDH" id="cGI-HC-vhs"/>
+                                                    <outlet property="searchTitleLabel" destination="0Ww-Kn-RpF" id="pfH-Ch-zsc"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -752,7 +752,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3Nw-oy-7cs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dYh-hI-x1L" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="detailNC" automaticallyAdjustsScrollViewInsets="NO" id="dYh-hI-x1L" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L71-5O-9dv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

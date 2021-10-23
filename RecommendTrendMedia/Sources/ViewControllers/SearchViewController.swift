@@ -10,6 +10,7 @@ import UIKit
 class SearchViewController: UIViewController {
   
   // MARK: Properties
+  let mediaInfo = MediaInfo()
   var titleSpace: String?
   
   // MARK: UI
@@ -34,6 +35,14 @@ class SearchViewController: UIViewController {
   @objc func vcDismiss() {
      self.navigationController?.popViewController(animated: true)
    }
+  
+  func convertTitleToImageName(_ base: String, _ occurrences: [String]) -> String {
+    var converted = base
+    for occurrence in occurrences {
+      converted = converted.replacingOccurrences(of: String(occurrence), with: "_")
+    }
+    return converted
+  }
 }
 
 // MARK: Extension - UITableViewDelegate
@@ -46,12 +55,17 @@ extension SearchViewController: UITableViewDelegate {
 // MARK: Extension - UITableViewDataSource
 extension SearchViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return mediaInfo.tvShow.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier) as? SearchTableViewCell else { return UITableViewCell() }
-   // TODO: cell configure
+    let media = mediaInfo.tvShow[indexPath.row]
+    cell.searchImageView.image = UIImage(named: convertTitleToImageName(media.title, [" ", ":"]))
+    cell.searchTitleLabel.text = media.title
+    cell.searchReleaseDateLabel.text = media.releaseDate
+    cell.searchOverviewLabel.text = media.overview
+    
     return cell
   }
 }
