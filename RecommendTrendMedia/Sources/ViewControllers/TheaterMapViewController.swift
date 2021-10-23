@@ -7,8 +7,18 @@
 
 import UIKit
 import MapKit
+import CoreLocation
+import CoreLocationUI
+
+// TODO: 위치 접근 권한 설정
+// TODO: 상영관 위치정보 핀 찍기
+// TODO: 롯데시네마, CGV, 메가박스 위치 정보를 가지고 필터된 핀을 보여주도록 하기
 
 class TheaterMapViewController: UIViewController {
+  
+  // MARK: - Properties
+  let theatherInfo = TheaterInfo()
+  let locationManager = CLLocationManager()
   
   // MARK: - UI
   @IBOutlet weak var mapView: MKMapView!
@@ -16,7 +26,7 @@ class TheaterMapViewController: UIViewController {
   // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    locationManager.delegate = self
   }
   
   // MARK: - Actions
@@ -25,7 +35,12 @@ class TheaterMapViewController: UIViewController {
   }
   
   @IBAction func onFilterbutton(_ sender: UIBarButtonItem) {
-    // TODO: 롯데시네마, CGV, 메가박스 위치 정보를 가지고 필터된 핀을 보여주도록 하기
+    
   }
+  
+}
+
+// MARK: Extension - CLLocationManagerDelegate
+extension TheaterMapViewController: CLLocationManagerDelegate {
   
 }
