@@ -290,15 +290,16 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHQ-Cq-F7g">
-                                                                            <rect key="frame" x="308" y="16" width="40" height="40"/>
-                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <rect key="frame" x="300.5" y="0.0" width="63.5" height="63.5"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="tHQ-Cq-F7g" secondAttribute="height" multiplier="1:1" id="rLE-Xq-hxT"/>
                                                                             </constraints>
-                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="Button"/>
-                                                                            <buttonConfiguration key="configuration" style="plain">
-                                                                                <imageReference key="image" image="paperclip" catalog="system" symbolScale="medium"/>
+                                                                            <buttonConfiguration key="configuration" style="plain" title="">
+                                                                                <imageReference key="image" image="paperclip.circle.fill" catalog="system" symbolScale="large"/>
+                                                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="27" scale="default"/>
                                                                             </buttonConfiguration>
                                                                             <connections>
                                                                                 <action selector="onWebLinkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpa-Fe-7l2"/>
@@ -310,10 +311,10 @@
                                                                         <constraint firstItem="cwL-Ii-N3B" firstAttribute="top" secondItem="0EW-1H-yAI" secondAttribute="top" id="2rd-GV-Dma"/>
                                                                         <constraint firstItem="tRY-Pc-dhM" firstAttribute="leading" secondItem="0EW-1H-yAI" secondAttribute="leading" constant="16" id="2zQ-aP-gAa"/>
                                                                         <constraint firstAttribute="width" secondItem="0EW-1H-yAI" secondAttribute="height" multiplier="1.5:1" id="CeH-Sl-302"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="tHQ-Cq-F7g" secondAttribute="trailing" constant="16" id="EPa-ZT-iQw"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="tHQ-Cq-F7g" secondAttribute="trailing" id="EPa-ZT-iQw"/>
                                                                         <constraint firstItem="cwL-Ii-N3B" firstAttribute="leading" secondItem="0EW-1H-yAI" secondAttribute="leading" id="WWp-Ag-zxH"/>
                                                                         <constraint firstAttribute="trailing" secondItem="cwL-Ii-N3B" secondAttribute="trailing" id="YfH-12-dgt"/>
-                                                                        <constraint firstItem="tHQ-Cq-F7g" firstAttribute="top" secondItem="0EW-1H-yAI" secondAttribute="top" constant="16" id="aVN-qg-Wms"/>
+                                                                        <constraint firstItem="tHQ-Cq-F7g" firstAttribute="top" secondItem="0EW-1H-yAI" secondAttribute="top" id="aVN-qg-Wms"/>
                                                                         <constraint firstAttribute="bottom" secondItem="cwL-Ii-N3B" secondAttribute="bottom" id="lsd-2w-dvo"/>
                                                                         <constraint firstAttribute="bottom" secondItem="tRY-Pc-dhM" secondAttribute="bottom" constant="16" id="qp0-FN-hFV"/>
                                                                         <constraint firstItem="tHQ-Cq-F7g" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0EW-1H-yAI" secondAttribute="leading" constant="308" id="xSh-fB-KIE"/>
@@ -876,7 +877,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="mappin.circle" catalog="system" width="128" height="121"/>
         <image name="movie_icon" width="512" height="512"/>
-        <image name="paperclip" catalog="system" width="121" height="128"/>
+        <image name="paperclip.circle.fill" catalog="system" width="128" height="121"/>
         <image name="profile_1" width="3456" height="4320"/>
         <image name="profile_4" width="2160" height="2700"/>
         <image name="profile_6" width="3840" height="2160"/>
@@ -884,9 +885,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
