@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
     detailTableView.delegate = self
     detailTableView.dataSource = self
     
+    self.title = "출연/제작"
     self.navigationController?.navigationBar.tintColor = .systemRed
     
     if let media = media {
