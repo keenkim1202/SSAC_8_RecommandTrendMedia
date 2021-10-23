@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailTableViewCell: UITableViewCell {
+  
   static let identifier: String = "detailCell"
   
   @IBOutlet weak var detailImageView: UIImageView!

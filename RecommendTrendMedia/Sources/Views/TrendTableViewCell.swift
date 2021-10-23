@@ -8,6 +8,7 @@
 import UIKit
 
 class TrendTableViewCell: UITableViewCell {
+  
   static let identifier: String = "trendCell"
   
   @IBOutlet weak var userLabel: UILabel!
@@ -29,6 +30,7 @@ class TrendTableViewCell: UITableViewCell {
   @IBOutlet weak var posterCardView: UIView!
   @IBOutlet weak var movieInfoCardView: UIView!
   
+  // MARK: - Configure
   func setViewShadow(_ view: UIView) {
     view.layer.shadowOpacity = 0.5
     view.layer.shadowRadius = CGFloat(10)

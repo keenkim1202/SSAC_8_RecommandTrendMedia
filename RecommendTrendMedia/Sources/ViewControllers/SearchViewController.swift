@@ -9,14 +9,14 @@ import UIKit
 
 class SearchViewController: UIViewController {
   
-  // MARK: Properties
+  // MARK: - Properties
   let mediaInfo = MediaInfo()
   
-  // MARK: UI
+  // MARK: - UI
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var searchTableView: UITableView!
   
-  // MARK: View Life-Cycle
+  // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     searchTableView.delegate = self
@@ -25,6 +25,7 @@ class SearchViewController: UIViewController {
     naviConfigure()
   }
   
+  // MARK: - Configure
   func naviConfigure() {
     self.title = "영화 검색"
     navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "multiply"), style: .plain, target: self, action: #selector(vcDismiss))
@@ -36,14 +37,15 @@ class SearchViewController: UIViewController {
    }
 }
 
-// MARK: Extension - UITableViewDelegate
+// MARK: Extension
+// MARK: - UITableViewDelegate
 extension SearchViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100
   }
 }
 
-// MARK: Extension - UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension SearchViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return mediaInfo.tvShow.count

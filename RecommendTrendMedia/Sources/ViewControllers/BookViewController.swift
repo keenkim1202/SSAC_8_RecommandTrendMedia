@@ -9,13 +9,13 @@ import UIKit
 
 class BookViewController: UIViewController {
   
-  // MARK: Properties
+  // MARK: - Properties
   let mediaInfo = MediaInfo()
   
-  // MARK: UI
+  // MARK: - UI
   @IBOutlet weak var bookCollectionView: UICollectionView!
   
-  // MARK: View Life-Cycle
+  // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     bookCollectionView.delegate = self
@@ -36,11 +36,12 @@ class BookViewController: UIViewController {
   }
 }
 
-// MARK: Extension - UICollectionViewDelegate
+// MARK: Extension
+// MARK: - UICollectionViewDelegate
 extension BookViewController: UICollectionViewDelegate {
 }
 
-// MARK: Extension - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension BookViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return mediaInfo.tvShow.count
@@ -57,5 +58,4 @@ extension BookViewController: UICollectionViewDataSource {
     
     return cell
   }
-  
 }

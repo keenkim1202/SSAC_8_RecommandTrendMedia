@@ -8,6 +8,7 @@
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
+  
   static let identifier: String = "searchCell"
   
   @IBOutlet weak var searchImageView: UIImageView!

@@ -8,6 +8,7 @@
 import UIKit
 
 class BookCollectionViewCell: UICollectionViewCell {
+  
   static let identifier: String = "bookCell"
   
   @IBOutlet weak var bookTitleLabel: UILabel!

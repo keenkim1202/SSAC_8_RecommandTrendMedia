@@ -9,18 +9,19 @@ import UIKit
 import Kingfisher
 
 class DetailViewController: UIViewController {
-  // MARK: Properties
+  
+  // MARK: - Properties
   var media: TvShow?
   var starring: [String] = []
   var isOpen: Bool = false
   
-  // MARK: UI
+  // MARK: - UI
   @IBOutlet weak var headerImageView: UIImageView!
   @IBOutlet weak var posterImageView: UIImageView!
   @IBOutlet weak var detailTableView: UITableView!
   
   
-  // MARK: View Life-Cycle
+  // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     detailTableView.delegate = self
@@ -33,22 +34,23 @@ class DetailViewController: UIViewController {
       configureHeaderImage(media)
       starring = media.starring.components(separatedBy: ", ")
     }
-    
   }
   
+  // MARK: - Configure
   func configureHeaderImage(_ media: TvShow) {
     headerImageView.kf.setImage(with: URL(string: media.backdropImage), placeholder: UIImage(named: "profile_7"))
     posterImageView.image = UIImage(named: media.title.replaceTargetsToReplacement([" ", ":"], "_"))
   }
   
-  // MARK: Action
+  // MARK: - Action
   @IBAction func onChevronButton(_ sender: UIButton) {
     isOpen.toggle()
     detailTableView.reloadSections(IndexSet(0...0), with: .automatic)
   }
 }
 
-// MARK: Extension - TableViewDelegate
+// MARK: Extension
+// MARK: - TableViewDelegate
 extension DetailViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     if indexPath.section == 0 {
@@ -67,7 +69,7 @@ extension DetailViewController: UITableViewDelegate {
   }
 }
 
-// MARK: Extension - TableViewDataSource
+// MARK: - TableViewDataSource
 extension DetailViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 0 {
@@ -86,7 +88,6 @@ extension DetailViewController: UITableViewDataSource {
           cell.chevronButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
         } else {
           cell.chevronButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-
         }
       } else {
         cell.overviewLabel.text = "줄거리 정보를 가져올 수 없습니다."
@@ -94,7 +95,8 @@ extension DetailViewController: UITableViewDataSource {
       return cell
     } else {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.identifier) as? DetailTableViewCell else { return UITableViewCell() }
-      // 출연진 목록
+      
+      // TODO: 출연진 정보(사진, 역할, 이름)에 대한 정보가 생기면 주입해주기
       cell.detailTitleLabel.text = starring[indexPath.row]
       cell.cellConfigure()
       return cell

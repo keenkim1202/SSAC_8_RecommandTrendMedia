@@ -9,30 +9,30 @@ import UIKit
 
 class TrendViewController: UIViewController {
   
-  // MARK: Properties
+  // MARK: - Properties
   let mediaInfo = MediaInfo()
   let profileBackgroundImages: [String] = [
     "profile_1", "profile_2", "profile_3", "profile_4",
     "profile_5", "profile_6", "profile_7", "profile_8"
   ]
   
-  // MARK: UI
+  // MARK: - UI
   @IBOutlet weak var trendTableView: UITableView!
   
-  // MARK: View Life-Cycle
+  // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
   }
   
-  // MARK: Actions
-  // menu button
+  // MARK: - Actions
+  /// menu button
   @IBAction func onBookMenu(_ sender: UIButton) {
     guard let bookVC = self.storyboard?.instantiateViewController(withIdentifier: "bookVC") as? BookViewController else { return }
     self.navigationController?.pushViewController(bookVC, animated: true)
   }
   
-  // navigationBar Button
+  /// navigationBar Button
   @IBAction func onPinButton(_ sender: UIBarButtonItem) {
     guard let theaterNC = self.storyboard?.instantiateViewController(withIdentifier: "theaterNC") as? UINavigationController else { return }
 
@@ -73,7 +73,6 @@ extension TrendViewController: UITableViewDelegate {
     }
   }
 }
-
 
 // MARK: - UITableViewDataSource
 extension TrendViewController: UITableViewDataSource {

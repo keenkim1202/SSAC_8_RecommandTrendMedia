@@ -10,16 +10,16 @@ import MapKit
 
 class TheaterMapViewController: UIViewController {
   
-  // MARK: UI
+  // MARK: - UI
   @IBOutlet weak var mapView: MKMapView!
   
-  // MARK: View Life-Cycle
+  // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
   }
   
-  // MARK: Action
+  // MARK: - Actions
   @IBAction func onExitButton(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
   }
