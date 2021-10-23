@@ -9,6 +9,9 @@ import UIKit
 
 class BookViewController: UIViewController {
   
+  // MARK: Properties
+  let mediaInfo = MediaInfo()
+  
   // MARK: UI
   @IBOutlet weak var bookCollectionView: UICollectionView!
   
@@ -40,14 +43,18 @@ extension BookViewController: UICollectionViewDelegate {
 // MARK: Extension - UICollectionViewDataSource
 extension BookViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return mediaInfo.tvShow.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as? BookCollectionViewCell else { return UICollectionViewCell() }
-    cell.contentView.backgroundColor = .ramdomColor
-    cell.bookRateLabel.tintColor = .white
-    cell.contentView.layer.cornerRadius = CGFloat(15)
+    cell.cellConfigure()
+    
+    let media = mediaInfo.tvShow[indexPath.row]
+    cell.bookCoverImageView.image = UIImage(named: media.title.replaceTargetsToReplacement([" ", ":"], "_"))
+    cell.bookTitleLabel.text = media.title
+    cell.bookRateLabel.text = "\(media.rate)"
+    
     return cell
   }
   
