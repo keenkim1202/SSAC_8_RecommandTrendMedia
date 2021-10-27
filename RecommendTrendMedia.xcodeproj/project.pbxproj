@@ -19,6 +19,8 @@
 		1C0CE9A527215FCF00809F41 /* UIColor++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */; };
 		1C40C305271BF8D600CB1C95 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */; };
 		1C40C309271C106C00CB1C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C308271C106C00CB1C95 /* User.swift */; };
+		1C6054DA2728FE3000DFBEB9 /* APIKeyInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C6054D92728FE3000DFBEB9 /* APIKeyInfo.plist */; };
+		1C6054DC2728FF3200DFBEB9 /* Bundle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6054DB2728FF3200DFBEB9 /* Bundle++Extension.swift */; };
 		1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */; };
 		1C8D5197271BDD7500F1A3B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5196271BDD7500F1A3B2 /* SceneDelegate.swift */; };
 		1C8D5199271BDD7500F1A3B2 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5198271BDD7500F1A3B2 /* TrendViewController.swift */; };
@@ -49,6 +51,8 @@
 		1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor++Extension.swift"; sourceTree = "<group>"; };
 		1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
 		1C40C308271C106C00CB1C95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1C6054D92728FE3000DFBEB9 /* APIKeyInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeyInfo.plist; sourceTree = "<group>"; };
+		1C6054DB2728FF3200DFBEB9 /* Bundle++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle++Extension.swift"; sourceTree = "<group>"; };
 		1C8D5191271BDD7500F1A3B2 /* RecommendTrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecommendTrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8D5196271BDD7500F1A3B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,8 +91,17 @@
 				1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */,
 				1C0ABD1E2723F12B00012671 /* String++Extension.swift */,
 				1CDD7EB0272430B7005A34BA /* UIAlert++Extension.swift */,
+				1C6054DB2728FF3200DFBEB9 /* Bundle++Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1C6054D82728FC1000DFBEB9 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				1CEB4E1727279D1300A4274C /* APIService.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		1C8D5188271BDD7500F1A3B2 = {
@@ -131,13 +144,13 @@
 		1C8D51B1271BDFA600F1A3B2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1C6054D82728FC1000DFBEB9 /* APIService */,
 				1C0CE9A327215FB000809F41 /* Extensions */,
 				1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */,
 				1C8D5196271BDD7500F1A3B2 /* SceneDelegate.swift */,
 				1C8D51B9271BE11200F1A3B2 /* Model */,
 				1C8D51B4271BE03900F1A3B2 /* Views */,
 				1C8D51B3271BDFEF00F1A3B2 /* ViewControllers */,
-				1CEB4E1727279D1300A4274C /* APIService.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -146,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1C8D51A2271BDD7800F1A3B2 /* Info.plist */,
+				1C6054D92728FE3000DFBEB9 /* APIKeyInfo.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -263,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C8D51A1271BDD7800F1A3B2 /* LaunchScreen.storyboard in Resources */,
+				1C6054DA2728FE3000DFBEB9 /* APIKeyInfo.plist in Resources */,
 				1C8D519E271BDD7800F1A3B2 /* Assets.xcassets in Resources */,
 				1C8D519C271BDD7500F1A3B2 /* Main.storyboard in Resources */,
 			);
@@ -283,6 +298,7 @@
 				1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */,
 				1C0CE99E2721480A00809F41 /* OverviewTableViewCell.swift in Sources */,
 				1C8D51AF271BDF9400F1A3B2 /* DetailTableViewCell.swift in Sources */,
+				1C6054DC2728FF3200DFBEB9 /* Bundle++Extension.swift in Sources */,
 				1C8D51AB271BDDB800F1A3B2 /* DetailViewController.swift in Sources */,
 				1C0CE99C2721432D00809F41 /* TheaterMapViewController.swift in Sources */,
 				1C8D51AD271BDE5E00F1A3B2 /* SearchTableViewCell.swift in Sources */,

@@ -10,6 +10,8 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
+// MARK: TableView Prefetch 추가하여 pagination 기능 구현 - 10/27
+
 class SearchViewController: UIViewController {
   
   // MARK: - Properties
@@ -17,6 +19,8 @@ class SearchViewController: UIViewController {
   let apiService = APIService()
   var movieData: [TvShow] = []
 //  var movies: [TvShow] = []
+  
+  var startPage = 1
   
   // MARK: - UI
   @IBOutlet weak var searchBar: UISearchBar!
@@ -27,6 +31,7 @@ class SearchViewController: UIViewController {
     super.viewDidLoad()
     searchTableView.delegate = self
     searchTableView.dataSource = self
+    searchTableView.prefetchDataSource = self
     
     naviConfigure()
     fetchMovieData()
@@ -47,7 +52,7 @@ class SearchViewController: UIViewController {
   // MARK: - API 네이버 영화검색
   func fetchMovieData() {
     
-    if let query = "스파이더맨".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+    if let query = "사랑".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
 
       let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=15&start=1"
       let header: HTTPHeaders = [
@@ -59,7 +64,7 @@ class SearchViewController: UIViewController {
         switch response.result {
         case .success(let value):
           let json = JSON(value)
-          print("JSON: \(json)")
+//          print("JSON: \(json)")
           
           let items = json["items"].arrayValue
           
@@ -124,5 +129,25 @@ extension SearchViewController: UITableViewDataSource {
     cell.searchOverviewLabel.text = media.overview
     
     return cell
+  }
+}
+
+// MARK: - UITableViewDataSourcePrefetching
+extension SearchViewController: UITableViewDataSourcePrefetching {
+  /// cell이 화면에 보이기 전에 필요한 리소스를 미리 다운 받는 기능 (하나하나가 아니라, 덩어리 형태로)
+  func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+    for indexPath in indexPaths {
+      if movieData.count - 1 == indexPath.row {
+        startPage += 10
+        fetchMovieData()
+        print("prefetched IndexPath: \(indexPath)")
+      }
+    }
+  }
+  
+  /// 사용자가 엄청 빨리 스크롤을 해서 prefetch할 필요가 없을 때 실행될 것.
+  /// 여러개가 취소될 수 있으므로 indexPaths 이다.
+  func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+    print("최소 - \(indexPaths)")
   }
 }
