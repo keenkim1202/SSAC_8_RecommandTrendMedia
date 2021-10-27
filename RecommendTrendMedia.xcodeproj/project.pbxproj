@@ -31,6 +31,10 @@
 		1C8D51AF271BDF9400F1A3B2 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D51AE271BDF9400F1A3B2 /* DetailTableViewCell.swift */; };
 		1C8D51B6271BE07000F1A3B2 /* MediaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D51B5271BE07000F1A3B2 /* MediaInfo.swift */; };
 		1C8D51B8271BE0CC00F1A3B2 /* TvShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D51B7271BE0CC00F1A3B2 /* TvShow.swift */; };
+		1CDD7EB1272430B7005A34BA /* UIAlert++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDD7EB0272430B7005A34BA /* UIAlert++Extension.swift */; };
+		1CEB4E1827279D1300A4274C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB4E1727279D1300A4274C /* APIService.swift */; };
+		1CEB4E1E27279D3900A4274C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1CEB4E1D27279D3900A4274C /* SwiftyJSON */; };
+		1CEB4E2227279E3900A4274C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CEB4E2127279E3900A4274C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,8 @@
 		1C8D51AE271BDF9400F1A3B2 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		1C8D51B5271BE07000F1A3B2 /* MediaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfo.swift; sourceTree = "<group>"; };
 		1C8D51B7271BE0CC00F1A3B2 /* TvShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShow.swift; sourceTree = "<group>"; };
+		1CDD7EB0272430B7005A34BA /* UIAlert++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert++Extension.swift"; sourceTree = "<group>"; };
+		1CEB4E1727279D1300A4274C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEB4E2227279E3900A4274C /* Alamofire in Frameworks */,
+				1CEB4E1E27279D3900A4274C /* SwiftyJSON in Frameworks */,
 				1C0CE99A27213BF100809F41 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +86,7 @@
 			children = (
 				1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */,
 				1C0ABD1E2723F12B00012671 /* String++Extension.swift */,
+				1CDD7EB0272430B7005A34BA /* UIAlert++Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 				1C8D51B9271BE11200F1A3B2 /* Model */,
 				1C8D51B4271BE03900F1A3B2 /* Views */,
 				1C8D51B3271BDFEF00F1A3B2 /* ViewControllers */,
+				1CEB4E1727279D1300A4274C /* APIService.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -202,6 +212,8 @@
 			name = RecommendTrendMedia;
 			packageProductDependencies = (
 				1C0CE99927213BF100809F41 /* Kingfisher */,
+				1CEB4E1D27279D3900A4274C /* SwiftyJSON */,
+				1CEB4E2127279E3900A4274C /* Alamofire */,
 			);
 			productName = RecommendTrendMedia;
 			productReference = 1C8D5191271BDD7500F1A3B2 /* RecommendTrendMedia.app */;
@@ -233,6 +245,8 @@
 			mainGroup = 1C8D5188271BDD7500F1A3B2;
 			packageReferences = (
 				1C0CE99827213BF100809F41 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1CEB4E1C27279D3900A4274C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1C8D5192271BDD7500F1A3B2 /* Products */;
 			projectDirPath = "";
@@ -265,6 +279,7 @@
 				1C0CE9972721295700809F41 /* WebLinkViewController.swift in Sources */,
 				1C0ABD1F2723F12B00012671 /* String++Extension.swift in Sources */,
 				1C40C305271BF8D600CB1C95 /* TrendTableViewCell.swift in Sources */,
+				1CEB4E1827279D1300A4274C /* APIService.swift in Sources */,
 				1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */,
 				1C0CE99E2721480A00809F41 /* OverviewTableViewCell.swift in Sources */,
 				1C8D51AF271BDF9400F1A3B2 /* DetailTableViewCell.swift in Sources */,
@@ -277,6 +292,7 @@
 				1C8D51B6271BE07000F1A3B2 /* MediaInfo.swift in Sources */,
 				1C0ABD272723FAE400012671 /* TheaterLocation.swift in Sources */,
 				1C8D5197271BDD7500F1A3B2 /* SceneDelegate.swift in Sources */,
+				1CDD7EB1272430B7005A34BA /* UIAlert++Extension.swift in Sources */,
 				1C0CE9A027215BA000809F41 /* BookViewController.swift in Sources */,
 				1C8D51B8271BE0CC00F1A3B2 /* TvShow.swift in Sources */,
 				1C40C309271C106C00CB1C95 /* User.swift in Sources */,
@@ -510,6 +526,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		1CEB4E1C27279D3900A4274C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -517,6 +549,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C0CE99827213BF100809F41 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		1CEB4E1D27279D3900A4274C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CEB4E1C27279D3900A4274C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		1CEB4E2127279E3900A4274C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
