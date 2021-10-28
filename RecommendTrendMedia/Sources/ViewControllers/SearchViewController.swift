@@ -18,7 +18,6 @@ class SearchViewController: UIViewController {
   let mediaInfo = MediaInfo()
   let apiService = APIService()
   var movieData: [TvShow] = []
-//  var movies: [TvShow] = []
   
   var startPage = 1
   
@@ -35,7 +34,6 @@ class SearchViewController: UIViewController {
     
     naviConfigure()
     fetchMovieData()
-//    movies = apiService.fetchMovieData()
   }
   
   // MARK: - Configure
@@ -51,7 +49,6 @@ class SearchViewController: UIViewController {
   
   // MARK: - API 네이버 영화검색
   func fetchMovieData() {
-    
     if let query = "사랑".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
 
       let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=15&start=1"
@@ -65,7 +62,6 @@ class SearchViewController: UIViewController {
         case .success(let value):
           let json = JSON(value)
 //          print("JSON: \(json)")
-          
           let items = json["items"].arrayValue
           
           for item in items {
@@ -111,15 +107,11 @@ extension SearchViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension SearchViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    print(#function)
     return movieData.count
-//    return movies.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier) as? SearchTableViewCell else { return UITableViewCell() }
-    print(#function)
-//    let media = movies[indexPath.row] // apiService
     let media = movieData[indexPath.row] // 이 파일 안에 있는 함수로
     
     cell.searchImageView.kf.setImage(with: URL(string: media.backdropImage), placeholder: UIImage(named: "profile_7"))
