@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
   var movieData: [TvShow] = []
   
   var startPage = 1
+  var totalCount = 0
   
   // MARK: - UI
   @IBOutlet weak var searchBar: UISearchBar!
@@ -28,12 +29,14 @@ class SearchViewController: UIViewController {
   // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    searchBar.delegate = self
+    searchBar.showsCancelButton = true
+    
     searchTableView.delegate = self
     searchTableView.dataSource = self
     searchTableView.prefetchDataSource = self
     
     naviConfigure()
-    fetchMovieData()
   }
   
   // MARK: - Configure
@@ -48,8 +51,8 @@ class SearchViewController: UIViewController {
    }
   
   // MARK: - API 네이버 영화검색
-  func fetchMovieData() {
-    if let query = "사랑".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+  func fetchMovieData(query: String) {
+    if let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
 
       let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=15&start=1"
       let header: HTTPHeaders = [
@@ -115,7 +118,6 @@ extension SearchViewController: UITableViewDataSource {
     let media = movieData[indexPath.row] // 이 파일 안에 있는 함수로
     
     cell.searchImageView.kf.setImage(with: URL(string: media.backdropImage), placeholder: UIImage(named: "profile_7"))
-//    cell.searchImageView.image = UIImage(named: media.title.replaceTargetsToReplacement([" ", ":"], "_"))
     cell.searchTitleLabel.text = media.title
     cell.searchReleaseDateLabel.text = media.releaseDate
     cell.searchOverviewLabel.text = media.overview
@@ -131,15 +133,43 @@ extension SearchViewController: UITableViewDataSourcePrefetching {
     for indexPath in indexPaths {
       if movieData.count - 1 == indexPath.row {
         startPage += 10
-        fetchMovieData()
+        
+        if let text = searchBar.text {
+          fetchMovieData(query: text)
+        }
         print("prefetched IndexPath: \(indexPath)")
       }
     }
   }
-  
-  /// 사용자가 엄청 빨리 스크롤을 해서 prefetch할 필요가 없을 때 실행될 것.
-  /// 여러개가 취소될 수 있으므로 indexPaths 이다.
+
   func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
     print("최소 - \(indexPaths)")
+  }
+}
+
+//MARK: - UISearchBarDelegate
+extension SearchViewController: UISearchBarDelegate {
+  // 검색 버튼(키보드 리턴키)을 눌렀을 때 실행
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    print(#function)
+    if let text = searchBar.text {
+      movieData.removeAll()
+      startPage = 1
+      fetchMovieData(query: text)
+    }
+  }
+  
+  // 취소 버튼을 눌렀을 때 실행
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    print(#function)
+    movieData.removeAll()
+    searchTableView.reloadData()
+    searchBar.setShowsCancelButton(false, animated: true)
+  }
+  
+  // 서치바에서 커서가 깜박이기 시작할 때(편집이 시작될 때)
+  func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    print(#function)
+    searchBar.setShowsCancelButton(true, animated: true)
   }
 }
