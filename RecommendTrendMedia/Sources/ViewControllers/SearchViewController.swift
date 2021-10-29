@@ -56,8 +56,8 @@ class SearchViewController: UIViewController {
 
       let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=15&start=1"
       let header: HTTPHeaders = [
-        "X-Naver-Client-Id": "wPzoG0Hr7uwJaGAZVNmi",
-        "X-Naver-Client-Secret": "5__OMmfTA9"
+        "X-Naver-Client-Id": Bundle.main.clientID,
+        "X-Naver-Client-Secret": Bundle.main.clientSECRET
       ]
       
       // 네트워크 처리는 비동기, 화면에 데이터를 띄우는 작업은 동기로 처리할 것.
