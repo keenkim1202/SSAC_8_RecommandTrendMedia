@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C0ABD1F2723F12B00012671 /* String++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ABD1E2723F12B00012671 /* String++Extension.swift */; };
+		1C0ABD252723FADB00012671 /* TheaterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ABD242723FADB00012671 /* TheaterInfo.swift */; };
+		1C0ABD272723FAE400012671 /* TheaterLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ABD262723FAE400012671 /* TheaterLocation.swift */; };
 		1C0CE9972721295700809F41 /* WebLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE9962721295700809F41 /* WebLinkViewController.swift */; };
 		1C0CE99A27213BF100809F41 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C0CE99927213BF100809F41 /* Kingfisher */; };
 		1C0CE99C2721432D00809F41 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */; };
@@ -17,6 +19,8 @@
 		1C0CE9A527215FCF00809F41 /* UIColor++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */; };
 		1C40C305271BF8D600CB1C95 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */; };
 		1C40C309271C106C00CB1C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C308271C106C00CB1C95 /* User.swift */; };
+		1C6054DA2728FE3000DFBEB9 /* APIKeyInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C6054D92728FE3000DFBEB9 /* APIKeyInfo.plist */; };
+		1C6054DC2728FF3200DFBEB9 /* Bundle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6054DB2728FF3200DFBEB9 /* Bundle++Extension.swift */; };
 		1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */; };
 		1C8D5197271BDD7500F1A3B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5196271BDD7500F1A3B2 /* SceneDelegate.swift */; };
 		1C8D5199271BDD7500F1A3B2 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5198271BDD7500F1A3B2 /* TrendViewController.swift */; };
@@ -29,10 +33,16 @@
 		1C8D51AF271BDF9400F1A3B2 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D51AE271BDF9400F1A3B2 /* DetailTableViewCell.swift */; };
 		1C8D51B6271BE07000F1A3B2 /* MediaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D51B5271BE07000F1A3B2 /* MediaInfo.swift */; };
 		1C8D51B8271BE0CC00F1A3B2 /* TvShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D51B7271BE0CC00F1A3B2 /* TvShow.swift */; };
+		1CDD7EB1272430B7005A34BA /* UIAlert++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDD7EB0272430B7005A34BA /* UIAlert++Extension.swift */; };
+		1CEB4E1827279D1300A4274C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB4E1727279D1300A4274C /* APIService.swift */; };
+		1CEB4E1E27279D3900A4274C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1CEB4E1D27279D3900A4274C /* SwiftyJSON */; };
+		1CEB4E2227279E3900A4274C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CEB4E2127279E3900A4274C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C0ABD1E2723F12B00012671 /* String++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++Extension.swift"; sourceTree = "<group>"; };
+		1C0ABD242723FADB00012671 /* TheaterInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterInfo.swift; sourceTree = "<group>"; };
+		1C0ABD262723FAE400012671 /* TheaterLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterLocation.swift; sourceTree = "<group>"; };
 		1C0CE9962721295700809F41 /* WebLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLinkViewController.swift; sourceTree = "<group>"; };
 		1C0CE99B2721432D00809F41 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
 		1C0CE99D2721480A00809F41 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -41,6 +51,8 @@
 		1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor++Extension.swift"; sourceTree = "<group>"; };
 		1C40C304271BF8D600CB1C95 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
 		1C40C308271C106C00CB1C95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1C6054D92728FE3000DFBEB9 /* APIKeyInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeyInfo.plist; sourceTree = "<group>"; };
+		1C6054DB2728FF3200DFBEB9 /* Bundle++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle++Extension.swift"; sourceTree = "<group>"; };
 		1C8D5191271BDD7500F1A3B2 /* RecommendTrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecommendTrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8D5196271BDD7500F1A3B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +67,8 @@
 		1C8D51AE271BDF9400F1A3B2 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		1C8D51B5271BE07000F1A3B2 /* MediaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfo.swift; sourceTree = "<group>"; };
 		1C8D51B7271BE0CC00F1A3B2 /* TvShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShow.swift; sourceTree = "<group>"; };
+		1CDD7EB0272430B7005A34BA /* UIAlert++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert++Extension.swift"; sourceTree = "<group>"; };
+		1CEB4E1727279D1300A4274C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEB4E2227279E3900A4274C /* Alamofire in Frameworks */,
+				1CEB4E1E27279D3900A4274C /* SwiftyJSON in Frameworks */,
 				1C0CE99A27213BF100809F41 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,8 +90,18 @@
 			children = (
 				1C0CE9A427215FCF00809F41 /* UIColor++Extension.swift */,
 				1C0ABD1E2723F12B00012671 /* String++Extension.swift */,
+				1CDD7EB0272430B7005A34BA /* UIAlert++Extension.swift */,
+				1C6054DB2728FF3200DFBEB9 /* Bundle++Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1C6054D82728FC1000DFBEB9 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				1CEB4E1727279D1300A4274C /* APIService.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		1C8D5188271BDD7500F1A3B2 = {
@@ -118,6 +144,7 @@
 		1C8D51B1271BDFA600F1A3B2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1C6054D82728FC1000DFBEB9 /* APIService */,
 				1C0CE9A327215FB000809F41 /* Extensions */,
 				1C8D5194271BDD7500F1A3B2 /* AppDelegate.swift */,
 				1C8D5196271BDD7500F1A3B2 /* SceneDelegate.swift */,
@@ -132,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1C8D51A2271BDD7800F1A3B2 /* Info.plist */,
+				1C6054D92728FE3000DFBEB9 /* APIKeyInfo.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,6 +192,7 @@
 		1C8D51B9271BE11200F1A3B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C0ABD262723FAE400012671 /* TheaterLocation.swift */,
 				1C8D51B7271BE0CC00F1A3B2 /* TvShow.swift */,
 				1C40C308271C106C00CB1C95 /* User.swift */,
 			);
@@ -173,6 +202,7 @@
 		1C8D51BA271BE12200F1A3B2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1C0ABD242723FADB00012671 /* TheaterInfo.swift */,
 				1C8D51B5271BE07000F1A3B2 /* MediaInfo.swift */,
 			);
 			path = Data;
@@ -196,6 +226,8 @@
 			name = RecommendTrendMedia;
 			packageProductDependencies = (
 				1C0CE99927213BF100809F41 /* Kingfisher */,
+				1CEB4E1D27279D3900A4274C /* SwiftyJSON */,
+				1CEB4E2127279E3900A4274C /* Alamofire */,
 			);
 			productName = RecommendTrendMedia;
 			productReference = 1C8D5191271BDD7500F1A3B2 /* RecommendTrendMedia.app */;
@@ -227,6 +259,8 @@
 			mainGroup = 1C8D5188271BDD7500F1A3B2;
 			packageReferences = (
 				1C0CE99827213BF100809F41 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1CEB4E1C27279D3900A4274C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1C8D5192271BDD7500F1A3B2 /* Products */;
 			projectDirPath = "";
@@ -243,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C8D51A1271BDD7800F1A3B2 /* LaunchScreen.storyboard in Resources */,
+				1C6054DA2728FE3000DFBEB9 /* APIKeyInfo.plist in Resources */,
 				1C8D519E271BDD7800F1A3B2 /* Assets.xcassets in Resources */,
 				1C8D519C271BDD7500F1A3B2 /* Main.storyboard in Resources */,
 			);
@@ -259,9 +294,11 @@
 				1C0CE9972721295700809F41 /* WebLinkViewController.swift in Sources */,
 				1C0ABD1F2723F12B00012671 /* String++Extension.swift in Sources */,
 				1C40C305271BF8D600CB1C95 /* TrendTableViewCell.swift in Sources */,
+				1CEB4E1827279D1300A4274C /* APIService.swift in Sources */,
 				1C8D5195271BDD7500F1A3B2 /* AppDelegate.swift in Sources */,
 				1C0CE99E2721480A00809F41 /* OverviewTableViewCell.swift in Sources */,
 				1C8D51AF271BDF9400F1A3B2 /* DetailTableViewCell.swift in Sources */,
+				1C6054DC2728FF3200DFBEB9 /* Bundle++Extension.swift in Sources */,
 				1C8D51AB271BDDB800F1A3B2 /* DetailViewController.swift in Sources */,
 				1C0CE99C2721432D00809F41 /* TheaterMapViewController.swift in Sources */,
 				1C8D51AD271BDE5E00F1A3B2 /* SearchTableViewCell.swift in Sources */,
@@ -269,10 +306,13 @@
 				1C0CE9A527215FCF00809F41 /* UIColor++Extension.swift in Sources */,
 				1C8D51A9271BDDAD00F1A3B2 /* SearchViewController.swift in Sources */,
 				1C8D51B6271BE07000F1A3B2 /* MediaInfo.swift in Sources */,
+				1C0ABD272723FAE400012671 /* TheaterLocation.swift in Sources */,
 				1C8D5197271BDD7500F1A3B2 /* SceneDelegate.swift in Sources */,
+				1CDD7EB1272430B7005A34BA /* UIAlert++Extension.swift in Sources */,
 				1C0CE9A027215BA000809F41 /* BookViewController.swift in Sources */,
 				1C8D51B8271BE0CC00F1A3B2 /* TvShow.swift in Sources */,
 				1C40C309271C106C00CB1C95 /* User.swift in Sources */,
+				1C0ABD252723FADB00012671 /* TheaterInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +542,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		1CEB4E1C27279D3900A4274C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -509,6 +565,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C0CE99827213BF100809F41 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		1CEB4E1D27279D3900A4274C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CEB4E1C27279D3900A4274C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		1CEB4E2127279E3900A4274C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
