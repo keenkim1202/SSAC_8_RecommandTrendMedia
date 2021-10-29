@@ -60,41 +60,48 @@ class SearchViewController: UIViewController {
         "X-Naver-Client-Secret": "5__OMmfTA9"
       ]
       
-      AF.request(url, method: .get, headers: header).validate().responseJSON { response in
-        switch response.result {
-        case .success(let value):
-          let json = JSON(value)
-//          print("JSON: \(json)")
-          let items = json["items"].arrayValue
-          
-          for item in items {
-            let title = item["title"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
-            let image = item["image"].stringValue
-//            let link = item["link"].stringValue
-            let userRating = item["userRating"].doubleValue
-//            let sub = item["subTitle"].stringValue
-            let actor = item["actor"].stringValue
-            let pubDate = item["pubDate"].stringValue
+      // 네트워크 처리는 비동기, 화면에 데이터를 띄우는 작업은 동기로 처리할 것.
+      DispatchQueue.global().async {
+        AF.request(url, method: .get, headers: header).validate().responseJSON { response in
+          switch response.result {
+          case .success(let value):
+            let json = JSON(value)
+            let items = json["items"].arrayValue
             
-            let data = TvShow(
-              title: title,
-              releaseDate: pubDate,
-              genre: "장르",
-              region: "지역",
-              overview: "줄거리",
-              rate: userRating,
-              starring: actor,
-              backdropImage: image)
+            for item in items {
+              let title = item["title"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
+              let image = item["image"].stringValue
+  //            let link = item["link"].stringValue
+              let userRating = item["userRating"].doubleValue
+  //            let sub = item["subTitle"].stringValue
+              let actor = item["actor"].stringValue
+              let pubDate = item["pubDate"].stringValue
+              
+              let data = TvShow(
+                title: title,
+                releaseDate: pubDate,
+                genre: "장르",
+                region: "지역",
+                overview: "줄거리",
+                rate: userRating,
+                starring: actor,
+                backdropImage: image)
+              
+              self.movieData.append(data)
+              print(value)
+            }
             
-            self.movieData.append(data)
-            print(value)
+            DispatchQueue.main.async { // check!!
+              self.searchTableView.reloadData()
+            }
+            
+            
+          case .failure(let error):
+            print(error)
           }
-          self.searchTableView.reloadData()
-          
-        case .failure(let error):
-          print(error)
         }
       }
+
     }
   }
 }
