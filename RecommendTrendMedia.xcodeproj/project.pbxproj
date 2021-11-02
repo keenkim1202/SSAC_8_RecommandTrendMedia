@@ -37,6 +37,7 @@
 		1CEB4E1827279D1300A4274C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB4E1727279D1300A4274C /* APIService.swift */; };
 		1CEB4E1E27279D3900A4274C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1CEB4E1D27279D3900A4274C /* SwiftyJSON */; };
 		1CEB4E2227279E3900A4274C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CEB4E2127279E3900A4274C /* Alamofire */; };
+		1CFD59A22731264700C7FAAD /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1CFD59A12731264700C7FAAD /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CFD59A22731264700C7FAAD /* JGProgressHUD in Frameworks */,
 				1CEB4E2227279E3900A4274C /* Alamofire in Frameworks */,
 				1CEB4E1E27279D3900A4274C /* SwiftyJSON in Frameworks */,
 				1C0CE99A27213BF100809F41 /* Kingfisher in Frameworks */,
@@ -228,6 +230,7 @@
 				1C0CE99927213BF100809F41 /* Kingfisher */,
 				1CEB4E1D27279D3900A4274C /* SwiftyJSON */,
 				1CEB4E2127279E3900A4274C /* Alamofire */,
+				1CFD59A12731264700C7FAAD /* JGProgressHUD */,
 			);
 			productName = RecommendTrendMedia;
 			productReference = 1C8D5191271BDD7500F1A3B2 /* RecommendTrendMedia.app */;
@@ -261,6 +264,7 @@
 				1C0CE99827213BF100809F41 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				1CEB4E1C27279D3900A4274C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1CFD59A02731264700C7FAAD /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 1C8D5192271BDD7500F1A3B2 /* Products */;
 			projectDirPath = "";
@@ -558,6 +562,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		1CFD59A02731264700C7FAAD /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -575,6 +587,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1CEB4E2027279E3900A4274C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		1CFD59A12731264700C7FAAD /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CFD59A02731264700C7FAAD /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -23,4 +23,12 @@ extension Bundle {
     guard let key = resource["CLIENT_SECRET"] as? String else { fatalError("APIKeyInfo.plist에 CLIENT_SECRET설정을 해주세요.")}
     return key
   }
+  
+  var TMDBapikey: String {
+    guard let file = self.path(forResource: "APIKeyInfo", ofType: "plist") else { return "" }
+    
+    guard let resource = NSDictionary(contentsOfFile: file) else { return "" }
+    guard let key = resource["TMDB_APIKEY"] as? String else { fatalError("APIKeyInfo.plist에 TMDB_APIKEY설정을 해주세요.")}
+    return key
+  }
 }

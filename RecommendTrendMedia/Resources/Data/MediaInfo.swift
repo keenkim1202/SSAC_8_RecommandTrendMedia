@@ -8,6 +8,8 @@
 import Foundation
 
 struct MediaInfo {
+  var mediaInfo: [TvShow] = []
+  
   let tvShow: [TvShow] = [
     
     TvShow(
